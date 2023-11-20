@@ -12,9 +12,10 @@
     <!--Шапка-->
     <header class="page-header">
       <div class="page-header__container container">
-        <a class="page-header__logo" href="index.html" aria-current="page">
+        <a class="page-header__logo" href="index.html">
           <img class="page-header__logo-imag" src="./img/svg/logo-mobile-pic.svg" width="33" height="38" alt="Логотип картинка мобильная Кэт энерджи">
-          <img class="page-header__logotext-imag" src="./img/svg/logo-mobile-text.svg" width="101" height="18" alt="Логотип текст Кет энерджи"></a>
+          <img class="page-header__logotext-imag" src="./img/svg/logo-mobile-text.svg" width="101" height="18" alt="Логотип текст Кет энерджи">
+        </a>
         <!--Навигация-->
         <nav class="navigation">
           <button class="navigation__toggle" type="button">
@@ -22,7 +23,7 @@
           </button>
           <ul class="navigation__list nav-list">
             <li class="nav-list__item ">
-              <a href="index.html" aria-current="page">Главная</a>
+              <a href="index.html">Главная</a>
             </li>
             <li class="nav-list__item">
               <a href="catalog.html">Каталог продукции</a>
@@ -41,7 +42,6 @@
           <h1 class="program-form__title page-title">Подбор программы</h1>
           <p class="program-form__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
         </div>
-
         <form class="form" action="https://echo.htmlacademy.ru/" method="POST">
           <div class="form__group-wrapper">
             <fieldset class="form__group form__group--text">
@@ -52,7 +52,7 @@
                 </li>
                 <li class="form__item">
                   <label class="form__label" for="personal-wiegh">Вес (кг):<sup>*</sup></label>
-                  <input class="form__input" type="number" id="personal-wiegh" name="personal-wiegh" placeholder="7" min="0" max="20">
+                  <input class="form__input" type="number" id="personal-wiegh" name="personal-wiegh" placeholder="7" min="0" max="20" required>
                 </li>
                 <li class="form__item">
                   <label class="form__label" for="personal-age">Возраст (лет):</label>
@@ -60,7 +60,6 @@
                 </li>
               </ul>
             </fieldset>
-
             <fieldset class="form__group form__group--radio">
               <ul class="control control--radio">
                 <li class="control__item">
@@ -84,7 +83,6 @@
               </ul>
             </fieldset>
           </div>
-
           <fieldset class="form__group form__group--contacts">
             <h2 class="form__title">Контактные данные (владельца кота)</h2>
             <ul class="form__list">
@@ -102,13 +100,11 @@
               </li>
             </ul>
           </fieldset>
-
           <fieldset class="form__group form__group--comment">
             <h2 class="form__title">Комментарий</h2>
             <label class="visually-hidden" for="message">Оставьте комментарий</label>
             <textarea class="form__input" name="comment" placeholder="Расскажите обо всех повадках кота" id="message"></textarea>
           </fieldset>
-
           <fieldset class="form__group form__group--check">
             <h2 class="form__title">Дополнительно</h2>
             <ul class="control control--check">
@@ -147,27 +143,27 @@
     </main>
     <!--Секция футтер-->
     <footer class="main-footer">
+      <!--Локация-->
+      <section class="location">
+        <h2 class="visually-hidden">Местонахождение.</h2>
+        <div class="main-location__container container">
+          <div class="main-location__contacts contacts">
+            <h3 class="contacts__title">Приглашаем к&nbsp;сотрудничеству дилеров!</h3>
+            <p class="contacts__text">ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span></p>
+          </div>
+        </div>
+        <div class="main-location__iframe-container">
+          <noscript>
+            <a class="main-location__img" href="#">
+              <img class="main-location-image" src="./img/svg/location.svg" width="320" height="362" alt="Карта">
+            </a>
+          </noscript>
+          <div class="main-location__iframe">
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A72842364309e3994a39a7526786cc386d846046c94fa0a207d73d899d4e8d0a5&amp;width=100%25&amp;height=362&amp;lang=ru_RU&amp;scroll=true"></script>
+          </div>
+        </div>
+      </section>
       <div class="main-footer__container container">
-        <!--Локация-->
-        <section class="location">
-          <h2 class="visually-hidden">Местонахождение.</h2>
-          <div class="main-location__container container">
-            <div class="main-location__contacts contacts">
-              <h3 class="contacts__title">Приглашаем к&nbsp;сотрудничеству дилеров!</h3>
-              <p class="contacts__text">ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span></p>
-            </div>
-          </div>
-          <div class="main-location__iframe-container">
-            <noscript>
-              <a class="main-location__img" href="#">
-                <img class="main-location-image" src="./img/svg/location.svg" width="320" height="362" alt="Карта">
-              </a>
-            </noscript>
-            <div class="main-location__iframe">
-              <!-- iframe с интерактивной картой (карты Google или Яндекса) -->
-            </div>
-          </div>
-        </section>
         <a class="main-footer__logo" href="index.html" aria-current="page">
           <img src="./img/svg/logo-text-footer.svg" width="128" height="24" alt="Логотип текст">
         </a>
@@ -179,13 +175,16 @@
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">Мы в Ютубе
+            <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
+              <span class="visually-hidden">Мы в Ютубе</span>
               <img src="./img/svg/youtube.svg" width="28" height="22" alt="Ютубе">
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">Мы в Телеграме</a>
-            <img src="./img/svg/telegram.svg" width="28" height="22" alt="Телеграме">
+            <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
+              <span class="visually-hidden">Мы в Телеграме</span>
+              <img src="./img/svg/telegram.svg" width="28" height="22" alt="Телеграме">
+            </a>
           </li>
         </ul>
         <a class="main-footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive">
