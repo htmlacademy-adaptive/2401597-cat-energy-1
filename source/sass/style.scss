@@ -3,4 +3,9 @@
 
 @import "./global/global.scss";
 
+@import "./blocks/page-header.scss";
+
 // Blocks
+body {
+  background-color: rgb(119, 126, 223);
+}
