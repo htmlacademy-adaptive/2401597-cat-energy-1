@@ -3,8 +3,9 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Кэт энерджи</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="./css/style.min.css">
 </head>
 
 <body>
@@ -23,13 +24,13 @@
           </button>
           <ul class="navigation__list nav-list">
             <li class="nav-list__item nav-list__item--current">
-              <a href="index.html" aria-current="page">Главная</a>
+              <a href="./index.html" aria-current="page">Главная</a>
             </li>
             <li class="nav-list__item">
-              <a href="catalog.html">Каталог продукции</a>
+              <a href="./catalog.html">Каталог продукции</a>
             </li>
             <li class="nav-list__item">
-              <a href="form.html">Подбор программы</a>
+              <a href="./form.html">Подбор программы</a>
             </li>
           </ul>
         </nav>
@@ -42,12 +43,12 @@
           <div class="functional__image">
             <img width="280" height="270" src="./img/index-can.png" alt="CAT ENERGY курица">
           </div>
-          <a class="functional__button button" href="form.html">Подобрать программу</a>
+          <a class="functional__button button" href="./form.html">Подобрать программу</a>
         </div>
       </section>
     </header>
     <!--Секция типы программ-->
-    <main class="main main-index">
+    <main class="main">
       <section class="program-type">
         <div class="program-type__container container">
           <h2 class="visually-hidden">Программа диет для котов</h2>
@@ -122,32 +123,32 @@
           </div>
         </div>
       </section>
+
     </main>
     <!--Секция футтер-->
     <footer class="main-footer">
+      <!--Локация-->
+      <section class="location location-index">
+        <h2 class="visually-hidden">Местонахождение.</h2>
+        <div class="location__container container">
+          <div class="location__contacts contacts">
+            <h3 class="contacts__title">Приглашаем к&nbsp;сотрудничеству дилеров!</h3>
+            <p class="contacts__text">ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span></p>
+          </div>
+        </div>
+        <div class="location__iframe-container">
+          <noscript>
+            <a class="location__img" href="#">
+              <img class="location__image" src="./img/svg/location.svg" width="320" height="362" alt="Карта">
+            </a>
+          </noscript>
+          <div class="location__iframe">
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A72842364309e3994a39a7526786cc386d846046c94fa0a207d73d899d4e8d0a5&amp;width=100%25&amp;height=362&amp;lang=ru_RU&amp;scroll=true"></script>
+          </div>
+        </div>
+      </section>
       <div class="main-footer__container container">
-        <!--Локация-->
-        <section class="location">
-          <h2 class="visually-hidden">Местонахождение.</h2>
-          <div class="location__container container">
-            <div class="location__contacts contacts">
-              <h3 class="contacts__title">Приглашаем к&nbsp;сотрудничеству дилеров!</h3>
-              <p class="contacts__text">ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span></p>
-            </div>
-          </div>
-          <div class="location__iframe-container">
-            <noscript>
-              <a class="location__img" href="#">
-                <img class="location__image" src="./img/svg/location.svg" width="320" height="362" alt="Карта">
-              </a>
-            </noscript>
-            <div class="location__iframe">
-              <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A72842364309e3994a39a7526786cc386d846046c94fa0a207d73d899d4e8d0a5&amp;width=100%25&amp;height=362&amp;lang=ru_RU&amp;scroll=true"></script>
-            </div>
-          </div>
-        </section>
-
-        <a class="main-footer__logo" href="index.html" aria-current="page">
+        <a class="main-footer__logo" href="./index.html" aria-current="page">
           <img src="./img/svg/logo-text-footer.svg" width="128" height="24" alt="Логотип текст">
         </a>
         <ul class="social">
