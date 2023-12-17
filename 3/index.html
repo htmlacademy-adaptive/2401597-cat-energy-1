@@ -13,16 +13,14 @@
   <div class="wrapper">
     <!--Шапка-->
     <header class="page-header">
-      <div class="page-header__container container">
+      <div class="page-header__container container page-header__container--mobile">
         <a class="page-header__logo" href="index.html" aria-current="page">
           <img class="page-header__logo-imag" src="./img/svg/logo-mobile-pic.svg" width="33" height="38" alt="Логотип картинка мобильная Кэт энерджи">
           <img class="page-header__logotext-imag" src="./img/svg/logo-mobile-text.svg" width="101" height="18" alt="Логотип текст Кет энерджи">
         </a>
         <!--Навигация-->
         <nav class="navigation">
-          <button class="navigation__toggle" type="button">
-            <span class="visually-hidden">Открыть меню</span>
-          </button>
+
           <ul class="navigation__list nav-list">
             <li class="nav-list__item nav-list__item--current">
               <a href="./index.html" aria-current="page">Главная</a>
@@ -34,13 +32,19 @@
               <a href="./form.html">Подбор программы</a>
             </li>
           </ul>
+          <button class="navigation__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+            <div class="toggle-icon "></div>
+          </button>
         </nav>
       </div>
       <!--Секция функционал-->
       <section class="functional">
         <div class="functional__container container">
-          <h1 class="functional__title page-title">Функциональное питание для котов</h1>
-          <p class="functional__text">Занялся собой? Займись котом!</p>
+          <div class="functional__content">
+            <h1 class="functional__title page-title">Функциональное питание для котов</h1>
+            <p class="functional__text">Занялся собой? Займись котом!</p>
+          </div>
           <div class="functional__image">
             <img width="280" height="270" src="./img/index-can.png" alt="CAT ENERGY курица">
           </div>
@@ -96,7 +100,7 @@
               <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
             </div>
             <div class="example__result">
-              <ul class="example__list ">
+              <ul class="example__list">
                 <li class="example__item">
                   <p class="example__text example__text--target">5 кг</p>
                   <p class="example__text example__text--type">Снижение веса</p>
@@ -129,7 +133,7 @@
     <!--Секция футтер-->
     <footer class="main-footer">
       <!--Локация-->
-      <section class="location location-index">
+      <section class="location location--index">
         <h2 class="visually-hidden">Местонахождение.</h2>
         <div class="location__container container">
           <div class="location__contacts contacts">
@@ -156,7 +160,7 @@
           <li class="social__item">
             <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
               <span class="visually-hidden">Мы в Вконтакте</span>
-              <img src="./img/svg/vkontakte.svg" width="28" height="22" alt="Вконтакте">
+              <img src="./source/img/svg/vkontakte.svg" width="28" height="22" alt="Вконтакте">
             </a>
           </li>
           <li class="social__item">
