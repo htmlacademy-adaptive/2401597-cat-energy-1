@@ -1,12 +1,44 @@
 .present {
   min-height: 290px;
+  margin-top: 35px;
 
   background-color: rgba(104, 183, 56, 0.85);
 }
 
 .more__present {
-  background-image: url("../img/present-cat.png");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: rgba(104, 183, 56, 0.85);
+  background-image: linear-gradient(rgba(104, 183, 56, 0.85),
+      rgba(104, 183, 56, 0.85)),
+    url("../../img/present-cat.png");
+  background-repeat: repeat, no-repeat;
+  background-position: top;
+  background-size: auto, cover;
 
+}
+
+.present__text {
+  position: relative;
+
+  max-width: 80%;
+  min-height: 60px;
+  margin: 0 auto;
+  padding: 187px 61px 43px 58px;
+
+  font-size: 16px;
+  line-height: 20px;
+  font-family: Lato;
+  text-align: center;
+  color: #ffffff;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 59px;
+    left: 101px;
+
+    display: block;
+
+    background-image: url("../img/svg/icon-present.svg")no-repeat;
+
+  }
 }

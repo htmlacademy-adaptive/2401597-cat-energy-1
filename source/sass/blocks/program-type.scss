@@ -1,31 +1,31 @@
 .program-type__list {
+  margin: 0;
+  padding: 0;
+
   list-style-type: none;
+
 }
 
 .program-type__item {
-  background-color: #f2f2f2;
+  margin-bottom: 20px;
 
+  background-color: #f2f2f2;
 
 
 }
 
 .program-type__title {
-  font-style: normal;
+  margin: 0;
+
   font-weight: 400;
   font-size: 24px;
   line-height: 37px;
-  font-family: Oswald;
+  font-family: "Oswald", sans-serif;
   color: #000000;
   text-transform: uppercase;
 }
 
 .program-type__text {
-  min-width: 227px;
-
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
-  font-family: Lato;
-
+  font-family: "Lato", sans-serif;
+  color: #444444;
 }

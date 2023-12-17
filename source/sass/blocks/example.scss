@@ -1,3 +1,50 @@
 .example {
   background-color: #eaeaea;
 }
+
+.example__title {
+  padding-top: 25px;
+  padding-bottom: 40px;
+}
+
+.example__description {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.example__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+
+  list-style-type: none;
+
+
+
+}
+
+.example__item {
+  min-width: 124px;
+}
+
+.example__text {
+  font-size: 24px;
+  line-height: 24px;
+  font-family: Oswald;
+  text-align: center;
+  color: #000000;
+
+  &--type {
+    font-size: 12px;
+    line-height: 12px;
+    font-family: Lato;
+    color: #444444;
+  }
+
+  &--price {
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
+}
