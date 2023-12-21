@@ -14,15 +14,3 @@
 .main-footer__logo {
   margin: 0 auto;
 }
-
-.social {
-  display: grid;
-  justify-content: center;
-  margin-top: 5px;
-  padding: 0;
-
-  list-style-type: none;
-
-  gap: 24px;
-  grid-template-columns: repeat(3, auto);
-}
