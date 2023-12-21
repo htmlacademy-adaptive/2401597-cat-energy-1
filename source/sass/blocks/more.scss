@@ -1,0 +1,45 @@
+.more__title {
+  margin: 25px 0 36px 0;
+
+  font-size: 24px;
+  line-height: 24px;
+  font-family: Oswald;
+  text-align: center;
+  color: #000000;
+}
+
+.more__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.more__item {
+  padding-bottom: 19px;
+
+  border-bottom: 1px solid #ebebeb;
+}
+
+.more__text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  font-family: Lato;
+  color: #444444;
+}
+
+.more__button {
+  padding: 10px 0;
+}
+
+.more__present {
+  background-color: rgba(104, 183, 56, 0.85);
+  background-image: url("../img/svg/icon-present.svg"),
+    linear-gradient(rgba(104, 183, 56, 0.85),
+      rgba(104, 183, 56, 0.85)), url("../img/present-cat.png");
+  background-repeat: no-repeat;
+  background-position: top 59px center, top, top;
+  background-size: 78px 80px, auto, cover;
+}

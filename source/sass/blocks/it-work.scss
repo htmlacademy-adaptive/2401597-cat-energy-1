@@ -1,0 +1,14 @@
+.it-work__title {
+  margin-bottom: 40px;
+}
+
+
+.it-work__list {
+  display: grid;
+  padding: 0;
+
+  list-style-type: none;
+
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
