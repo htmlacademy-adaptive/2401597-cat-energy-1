@@ -5,6 +5,15 @@
   background-color: rgba(104, 183, 56, 0.85);
 }
 
+.more__present {
+  background-color: rgba(104, 183, 56, 0.85);
+  background-image: url("../img/svg/icon-present.svg"),
+    linear-gradient(rgba(104, 183, 56, 0.85),
+      rgba(104, 183, 56, 0.85)), url("../img/present-cat.png");
+  background-repeat: no-repeat;
+  background-position: top 59px center, top, top;
+  background-size: 78px 80px, auto, cover;
+}
 
 .present__text {
   min-height: 60px;
