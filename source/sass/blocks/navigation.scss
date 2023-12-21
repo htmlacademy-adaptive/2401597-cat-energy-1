@@ -4,75 +4,71 @@
   justify-content: center;
   padding: 0;
 
+  list-style: none;
+
   column-gap: 33px;
 }
 
-// Взяла готовый код для выподающего меню
+
 .navigation__toggle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  --width: 40px;
-  width: var(--width);
-  --height: 30px;
-  height: var(--height);
-
-  --line-height: 1px;
-  --color: #ffffff;
-
-  --line-margin: 2;
-  --time: 0.1s;
-}
-
-.toggle-icon {
   position: relative;
 
-  width: var(--width);
-  height: var(--line-height);
+  width: 30px;
+  height: 30px;
+  margin-right: -2px;
 
-  background-color: var(--color);
-}
-
-.toggle-icon::before,
-.toggle-icon::after {
-  content: "";
-  position: absolute;
-  left: 0;
-
-  display: block;
-  width: var(--width);
-  height: var(--line-height);
-
-  background-color: var(--color);
-
-  transition: transform var(--time) ease-in,
-    top var(--time) linear var(--time);
-}
-
-.toggle-icon::before {
-  top: calc(var(--line-height) * -8);
-}
-
-.toggle-icon::after {
-  top: calc(var(--line-height) * 8);
-}
-
-.toggle-icon.toggle-icon--active {
   background-color: transparent;
+  border: none;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
 }
 
-.toggle-icon.toggle-icon--active::before,
-.toggle-icon.toggle-icon--active::after {
-  top: 0;
+.navigation__toggle-icon {
+  position: absolute;
+  top: 46%;
+  left: 50%;
 
-  transition: top var(--time) linear,
-    transform var(--time) ease-in var(--time);
+  width: 24px;
+  height: 2px;
+
+  background-color: #000000;
+  transform: translate(-50%, -50%);
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+
+    width: 24px;
+    height: 2px;
+
+    background-color: #000000;
+  }
+
+  &::before {
+    top: 8px;
+  }
+
+  &::after {
+    top: -8px;
+  }
 }
 
-.toggle-icon.toggle-icon--active::before {
-  transform: rotate(45deg);
-}
+.navigation--open .nav__toggle-line {
+  background-color: transparent;
 
-.toggle-icon.toggle-icon--active::after {
-  transform: rotate(-45deg);
+  &::before {
+    top: 50%;
+
+    transform: translate(-35%, -50%) rotate(-46deg);
+  }
+
+  &::after {
+    top: 50%;
+
+    transform: translate(-35%, -50%) rotate(46deg);
+  }
 }

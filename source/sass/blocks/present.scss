@@ -9,7 +9,8 @@
   background-color: rgba(104, 183, 56, 0.85);
   background-image: linear-gradient(rgba(104, 183, 56, 0.85),
       rgba(104, 183, 56, 0.85)),
-    url("../../img/present-cat.png");
+    url("../img/present-cat.png");
+
   background-repeat: repeat, no-repeat;
   background-position: top;
   background-size: auto, cover;
@@ -38,7 +39,7 @@
 
     display: block;
 
-    background-image: url("../img/svg/icon-present.svg")no-repeat;
+    background-image: url("../img/svg/icon-present.svg");
 
   }
 }
