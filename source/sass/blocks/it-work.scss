@@ -12,3 +12,19 @@
   gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
+
+@media (min-width: $tablet-width) {
+  .it-work__list {
+    column-gap: 154px;
+
+    grid-template-columns: repeat(auto-fit, minmax(240px, 2fr));
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .it-work__list {
+    column-gap: 95px;
+
+    grid-template-columns: repeat(auto-fit, minmax(230px, 4fr));
+  }
+}

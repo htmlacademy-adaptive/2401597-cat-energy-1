@@ -8,7 +8,7 @@
 .program-type__item {
   margin-bottom: 20px;
 
-  background-color: #f2f2f2;
+  background-color: $basicGrey;
 }
 
 .program-type__title {
@@ -18,11 +18,29 @@
   font-size: 24px;
   line-height: 37px;
   font-family: "Oswald", sans-serif;
-  color: #000000;
+  color: $black;
   text-transform: uppercase;
 }
 
 .program-type__text {
   font-family: "Lato", sans-serif;
-  color: #444444;
+  color: $specialDarkGrey;
+}
+
+@media (min-width: $tablet-width) {
+  .program-type__list {
+    min-width: 708px;
+  }
+
+}
+
+@media (min-width: $desktop-width) {
+  .program-type__list {
+    display: grid;
+    min-width: 1220px;
+
+    gap: 80px;
+    grid-template-columns: 570px 570px;
+
+  }
 }

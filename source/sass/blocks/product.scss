@@ -27,7 +27,7 @@
   font-size: 16px;
   line-height: 20px;
   font-family: "Oswald", sans-serif;
-  color: #222222;
+  color: $specialDarkGrey;
   text-transform: uppercase;
 }
 
@@ -49,7 +49,29 @@
 }
 
 .button--light {
-  color: #444444;
+  color: $specialDarkGrey;
 
-  background-color: #cdcdcd;
+  background-color: $silverGrey;
+}
+
+@media(min-width:$tablet-width) {
+  .product__list {
+    display: grid;
+
+    column-gap: 60px;
+
+    grid-template-columns: repeat(2, 324px);
+  }
+
+}
+
+@media(min-width:$desktop-width) {
+  .product__list {
+    display: grid;
+
+    column-gap: 80px;
+
+    grid-template-columns: repeat(4, 245px);
+  }
+
 }
