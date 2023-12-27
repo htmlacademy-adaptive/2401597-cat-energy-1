@@ -1,5 +1,5 @@
 .example {
-  background-color: #eaeaea;
+  background-color: $sliderGrey;
 }
 
 .example__title {
@@ -14,11 +14,11 @@
 
 .example__list {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
   padding: 0;
 
   list-style-type: none;
+
+  gap: 32px;
 }
 
 .example__item {
@@ -30,18 +30,49 @@
   line-height: 24px;
   font-family: Oswald;
   text-align: center;
-  color: #000000;
+  color: $black;
 
   &--type {
     font-size: 12px;
     line-height: 12px;
     font-family: Lato;
-    color: #444444;
+    color: $specialDarkGrey;
   }
 
   &--price {
     font-size: 14px;
     line-height: 20px;
     text-transform: uppercase;
+  }
+}
+
+@media (min-width:$tablet-width) {
+  .example {
+    background-color: $white;
+  }
+
+  .example__result {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .example__list {
+    width: 162px;
+
+    gap: 43px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .example__container {
+    display: grid;
+    justify-content: space-between;
+
+    grid-template-columns: 436px 560px;
+  }
+
+  .example__result {
+    display: grid;
+    width: 436px;
   }
 }

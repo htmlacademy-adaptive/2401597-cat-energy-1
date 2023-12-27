@@ -2,8 +2,20 @@
   width: 100%;
   min-width: 320px;
   max-width: 1260px;
-
   margin: 0 auto;
-
   padding: 0 20px;
+}
+
+@media (min-width:$tablet-width) {
+  .container {
+    padding: 0 30px;
+
+  }
+}
+
+@media (min-width:$desktop-width) {
+  .container {
+    padding: 0 100px;
+
+  }
 }

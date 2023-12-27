@@ -1,13 +1,24 @@
 .location {
-  background-color: #f2f2f2;
+  background-color: $basicGrey;
 }
 
 .location--index {
-  background-color: #ffffff;
+  background-color: $white;
 }
 
 
 .location__contacts {
   display: flex;
   padding: 26px 0 26px 0;
+}
+
+.location__iframe-container {
+  width: 100%;
+}
+
+
+@media (min-width: $desktop-width) {
+  .location__iframe {
+    // width: 100%;
+  }
 }

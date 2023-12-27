@@ -5,12 +5,13 @@
   line-height: 24px;
   font-family: Oswald;
   text-align: center;
-  color: #000000;
+  color: $black;
 }
 
 .more__list {
   display: flex;
   flex-wrap: wrap;
+  max-width: 1220px;
   margin: 0;
   padding: 0;
 }
@@ -18,7 +19,7 @@
 .more__item {
   padding-bottom: 19px;
 
-  border-bottom: 1px solid #ebebeb;
+  border-bottom: 1px solid $specialGrey2;
 }
 
 .more__text {
@@ -27,19 +28,43 @@
   font-size: 14px;
   line-height: 14px;
   font-family: Lato;
-  color: #444444;
+  color: $specialDarkGrey;
 }
 
 .more__button {
   padding: 10px 0;
 }
 
-.more__present {
-  background-color: rgba(104, 183, 56, 0.85);
-  background-image: url("../img/svg/icon-present.svg"),
-    linear-gradient(rgba(104, 183, 56, 0.85),
-      rgba(104, 183, 56, 0.85)), url("../img/present-cat.png");
-  background-repeat: no-repeat;
-  background-position: top 59px center, top, top;
-  background-size: 78px 80px, auto, cover;
+@media(min-width:$tablet-width) {
+  .more__item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 26px 0 28px 0;
+  }
+
+  .more__title {
+
+    width: 50%;
+  }
+
+  .more__text {
+    width: 25%;
+  }
+
+  .more__button {
+    width: 632px;
+    margin: 0 auto;
+
+  }
+}
+
+@media(min-width:$desktop-width) {
+  .more_wraper {
+    display: grid;
+
+    column-gap: 80px;
+
+    grid-template-columns: 895px 245px;
+  }
 }
