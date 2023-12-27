@@ -1,0 +1,52 @@
+.functional {
+  margin-bottom: 20px;
+}
+
+.functional__container {
+  padding: 0;
+
+  text-align: center;
+  color: #ffffff;
+}
+
+.functional__content {
+  padding: 30px 20px 160px;
+
+  background-color: rgba(104, 183, 56, 0.85);
+  background-image: linear-gradient(rgba(104, 183, 56, 0.85),
+      rgba(104, 183, 56, 0.85)),
+    url("../img/hero-cat.png");
+  background-repeat: repeat, no-repeat;
+  background-position: top;
+  background-size: auto, cover;
+}
+
+.functional__title {
+  margin-bottom: 25px;
+
+  line-height: 36px;
+  color: inherit;
+}
+
+.functional__text {
+  margin: 0;
+
+  line-height: 14px;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+}
+
+.functional__image {
+  width: 280px;
+  height: 270px;
+  margin: -135px auto 0;
+
+  & img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.functional__button {
+  padding: 10px 0;
+}
