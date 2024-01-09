@@ -1,0 +1,128 @@
+.more__inner {
+  @media (min-width:$desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+
+
+  }
+}
+
+.more__title {
+  margin: 25px 0 36px 0;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  font-family: $ff-other;
+  text-align: center;
+  color: $black;
+
+  @media (min-width:$tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    text-align: start;
+  }
+
+  @media (min-width:$desktop-width) {
+    max-width: 1221px;
+
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+.more__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  @media (min-width:$tablet-width) {
+    justify-content: center;
+    padding-top: 27px;
+  }
+
+  @media (min-width:$desktop-width) {
+    justify-content: space-between;
+
+
+  }
+}
+
+.more__item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  padding-bottom: 19px;
+
+  border-bottom: 1px solid $special-grey1;
+
+  @media (min-width:$tablet-width) {
+    align-items: center;
+    width: 632px;
+
+    column-gap: 49px;
+  }
+
+  @media (min-width:$desktop-width) {
+    flex-wrap: nowrap;
+    width: 895px;
+  }
+}
+
+.more-product-title {
+  min-width: 280px;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  font-family: $ff-other;
+  color: $dark-grey2;
+  text-transform: uppercase;
+
+  @media (min-width:$tablet-width) {
+    margin-bottom: 25px;
+  }
+}
+
+.more__text {
+  margin: 0;
+  margin-bottom: 15px;
+
+  font-size: 14px;
+  line-height: 14px;
+
+}
+
+.more__button {
+  padding: 10px 0;
+
+  @media (min-width:$tablet-width) {
+    width: 632px;
+  }
+
+  @media (min-width:$desktop-width) {
+    width: 244px;
+    margin: 0;
+  }
+}
+
+.more__present {
+  background-color: rgba(104, 183, 56, 0.85);
+  background-image: url("../../img/svg/icon-present.svg"),
+    linear-gradient(rgba(104, 183, 56, 0.85),
+      rgba(104, 183, 56, 0.85)), url("../../img/present-icon@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: top 59px center, top, top;
+  background-size: 78px 80px, auto, cover;
+
+  @media (min-width:$desktop-width) {
+    max-width: 245px;
+    max-height: 288px;
+  }
+}

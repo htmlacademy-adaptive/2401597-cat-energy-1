@@ -1,0 +1,131 @@
+.functional {
+  padding-bottom: 20px;
+}
+
+.functional__container {
+  min-width: 280px;
+
+  text-align: center;
+  color: $white;
+}
+
+.functional__content {
+  padding: 30px 0 160px;
+
+  background-color: rgba(104, 183, 56, 0.85);
+  background-image: linear-gradient(rgba(104, 183, 56, 0.85),
+      rgba(104, 183, 56, 0.85)),
+    url("../../img/index-cat@1x.jpg");
+  background-repeat: repeat, no-repeat;
+  background-position: top;
+  background-size: auto, cover;
+
+  @media (min-width:$tablet-width) {
+    margin: 65px 204px 21px 90px;
+    padding: 0;
+
+    background-color: $white;
+    background-image: none;
+  }
+
+  @media (min-width:$desktop-width) {
+    margin: 0;
+  }
+}
+
+.functional__title {
+  margin-bottom: 25px;
+
+  line-height: 36px;
+  color: inherit;
+
+  @media (min-width:$tablet-width) {
+    width: 414px;
+    min-height: 120px;
+
+    font-size: 60px;
+    line-height: 60px;
+    font-family: $ff-other;
+    text-align: left;
+    color: $black;
+
+  }
+
+  @media (min-width:$desktop-width) {
+    width: 414px;
+    margin: 114px 726px 40px 80px;
+  }
+
+}
+
+.functional__text {
+  margin: 0;
+
+  line-height: 14px;
+  font-family: $ff-other;
+  text-transform: uppercase;
+
+  @media (min-width:$tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    text-align: left;
+    color: $black;
+  }
+
+  @media (min-width:$desktop-width) {
+    margin: 0 0 52px 80px;
+  }
+}
+
+.functional__image {
+  position: relative;
+
+  width: 280px;
+  height: 270px;
+  margin: -135px auto 0;
+
+  & img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (min-width:$tablet-width) {
+    width: 709px;
+    height: 609px;
+    margin: 0;
+  }
+
+  @media (min-width:$desktop-width) {
+    width: 552px;
+    height: 499px;
+    margin: -370px 221px 0 447px;
+  }
+}
+
+.functional__button {
+  padding: 10px 0;
+
+  @media (min-width:$tablet-width) {
+    content: "";
+    position: absolute;
+    bottom: 400px;
+    left: 120px;
+    z-index: 2;
+
+    width: 244px;
+    height: 54px;
+    padding: 14px 26px;
+
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  @media (min-width:$desktop-width) {
+    bottom: 350px;
+    left: 180px;
+  }
+}

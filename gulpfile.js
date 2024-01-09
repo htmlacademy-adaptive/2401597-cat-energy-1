@@ -1,166 +1,190 @@
+import { readFileSync, rmSync } from 'node:fs';
+
 import gulp from 'gulp';
 import plumber from 'gulp-plumber';
-import sass from 'gulp-dart-sass';
+import { nunjucksCompile } from 'gulp-nunjucks';
+import htmlmin from 'gulp-htmlmin';
+import * as dartSass from 'sass';
+import gulpSass from 'gulp-sass';
 import postcss from 'gulp-postcss';
+import postUrl from 'postcss-url';
 import autoprefixer from 'autoprefixer';
 import csso from 'postcss-csso';
-import rename from 'gulp-rename';
-import terser from 'gulp-terser';
-import squoosh from 'gulp-libsquoosh';
+// import rename from 'gulp-rename';
+import { createGulpEsbuild } from 'gulp-esbuild';
+import browserslistToEsbuild from 'browserslist-to-esbuild';
+import sharp from 'gulp-sharp-responsive';
 import svgo from 'gulp-svgmin';
-import svgstore from 'gulp-svgstore';
-import del from 'del';
-import browser from 'browser-sync';
+import { stacksvg } from 'gulp-stacksvg';
+import server from 'browser-sync';
+import bemlinter from 'gulp-html-bemlinter';
 
-// Styles
+const { src, dest, watch, series, parallel } = gulp;
+const sass = gulpSass(dartSass);
+const PATH_TO_SOURCE = './source/';
+const PATH_TO_DIST = './build/';
+const PATH_TO_RAW = './raw/';
+const PATHS_TO_STATIC = [
+  `${PATH_TO_SOURCE}fonts/**/*.{woff2,woff}`,
+  `${PATH_TO_SOURCE}*.ico`,
+  `${PATH_TO_SOURCE}*.webmanifest`,
+  `${PATH_TO_SOURCE}favicons/**/*.{png,svg}`,
+  `${PATH_TO_SOURCE}vendor/**/*`,
+  `${PATH_TO_SOURCE}img/**/*`,
+  `!${PATH_TO_SOURCE}img/sprite/**/*`,
+  `!${PATH_TO_SOURCE}**/README.md`,
+];
+let isDevelopment = true;
 
-export const styles = () => {
-  return gulp.src('source/sass/style.scss', { sourcemaps: true })
+export function processMarkup() {
+  return src(`${PATH_TO_SOURCE}**/*.html`)
+    .pipe(nunjucksCompile())
+    .pipe(htmlmin({ collapseWhitespace: !isDevelopment }))
+    .pipe(dest(PATH_TO_DIST))
+    .pipe(server.stream());
+}
+
+export function lintBem() {
+  return src(`${PATH_TO_SOURCE}*.html`)
+    .pipe(bemlinter());
+}
+
+export function processStyles() {
+  return src(`${PATH_TO_SOURCE}scss/*.scss`, { sourcemaps: isDevelopment })
     .pipe(plumber())
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([
+      postUrl({ assetsPath: '../' }),
       autoprefixer(),
       csso()
     ]))
-    .pipe(rename('style.min.css'))
-    .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
-    .pipe(browser.stream());
+    // .pipe(rename('style.min.css'))
+    .pipe(dest(`${PATH_TO_DIST}css`, { sourcemaps: isDevelopment }))
+    .pipe(server.stream());
 }
 
-// HTML
+export function processScripts() {
+  const gulpEsbuild = createGulpEsbuild({ incremental: isDevelopment });
 
-const html = () => {
-  return gulp.src('source/*.html')
-    .pipe(gulp.dest('build'));
-}
-
-// Scripts
-
-const scripts = () => {
-  return gulp.src('source/js/script.js')
-    .pipe(gulp.dest('build/js'))
-    .pipe(browser.stream());
-}
-
-// Images
-
-const optimizeImages = () => {
-  return gulp.src('source/img/**/*.{png,jpg}')
-    .pipe(squoosh())
-    .pipe(gulp.dest('build/img'))
-}
-
-const copyImages = () => {
-  return gulp.src('source/img/**/*.{png,jpg}')
-    .pipe(gulp.dest('build/img'))
-}
-
-// WebP
-
-const createWebp = () => {
-  return gulp.src('source/img/**/*.{png,jpg}')
-    .pipe(squoosh({
-      webp: {}
+  return src(`${PATH_TO_SOURCE}js/*.js`)
+    .pipe(gulpEsbuild({
+      bundle: true,
+      format: 'esm',
+      // splitting: true,
+      platform: 'browser',
+      minify: !isDevelopment,
+      sourcemap: isDevelopment,
+      target: browserslistToEsbuild(),
     }))
-    .pipe(gulp.dest('build/img'))
+    .pipe(dest(`${PATH_TO_DIST}js`))
+    .pipe(server.stream());
 }
 
-// SVG
+export function optimizeRaster() {
+  const RAW_DENSITY = 2;
+  const TARGET_FORMATS = [undefined, 'webp']; // undefined — initial format: jpg or png
 
-const svg = () =>
-  gulp.src(['source/img/**/*.svg', '!source/img/icons/*.svg'])
+  function createOptionsFormat() {
+    const formats = [];
+
+    for (const format of TARGET_FORMATS) {
+      for (let density = RAW_DENSITY; density > 0; density--) {
+        formats.push(
+          {
+            format,
+            rename: { suffix: `@${density}x` },
+            width: ({ width }) => Math.ceil(width * density / RAW_DENSITY),
+            jpegOptions: { progressive: true },
+          },
+        );
+      }
+    }
+
+    return { formats };
+  }
+
+  return src(`${PATH_TO_RAW}img/**/*.{png,jpg,jpeg}`)
+    .pipe(sharp(createOptionsFormat()))
+    .pipe(dest(`${PATH_TO_SOURCE}img`));
+}
+
+export function optimizeVector() {
+  return src([`${PATH_TO_RAW}**/*.svg`])
     .pipe(svgo())
-    .pipe(gulp.dest('build/img'));
-
-const sprite = () => {
-  return gulp.src('source/img/icons/*.svg')
-    .pipe(svgo())
-    .pipe(svgstore({
-      inlineSvg: true
-    }))
-    .pipe(rename('sprite.svg'))
-    .pipe(gulp.dest('build/img'));
+    .pipe(dest(PATH_TO_SOURCE));
 }
 
-// Copy
-
-const copy = (done) => {
-  gulp.src([
-    'source/fonts/**/*.{woff2,woff}',
-    'source/*.ico',
-  ], {
-    base: 'source'
-  })
-    .pipe(gulp.dest('build'))
-  done();
+export function createStack() {
+  return src(`${PATH_TO_SOURCE}img/sprite/**/*.svg`)
+    .pipe(stacksvg({ output: 'sprite' }))
+    .pipe(dest(`${PATH_TO_DIST}img`));
 }
 
-// Clean
+export function copyStatic() {
+  return src(PATHS_TO_STATIC, { base: PATH_TO_SOURCE })
+    .pipe(dest(PATH_TO_DIST));
+}
 
-const clean = () => {
-  return del('build');
-};
-
-// Server
-
-const server = (done) => {
-  browser.init({
+export function startServer() {
+  server.init({
     server: {
-      baseDir: 'build'
+      baseDir: PATH_TO_DIST
     },
     cors: true,
     notify: false,
     ui: false,
+  }, (err, bs) => {
+    bs.addMiddleware('*', (req, res) => {
+      res.write(readFileSync(`${PATH_TO_DIST}404.html`));
+      res.end();
+    });
+  });
+
+  watch(`${PATH_TO_SOURCE}**/*.html`, series(processMarkup));
+  watch(`${PATH_TO_SOURCE}scss/**/*.scss`, series(processStyles));
+  watch(`${PATH_TO_SOURCE}js/**/*.js`, series(processScripts));
+  watch(`${PATH_TO_SOURCE}img/sprite/**/*.svg`, series(createStack, reloadServer));
+  watch(`${PATH_TO_SOURCE}img/svg/**/*.svg`, series(optimizeVector, reloadServer));
+  watch(PATHS_TO_STATIC, series(copyStatic, reloadServer));
+}
+
+function reloadServer(done) {
+  server.reload();
+  done();
+}
+
+export function removeBuild(done) {
+  rmSync(PATH_TO_DIST, {
+    force: true,
+    recursive: true,
   });
   done();
 }
 
-// Reload
-
-const reload = (done) => {
-  browser.reload();
-  done();
+export function buildProd(done) {
+  isDevelopment = false;
+  series(
+    removeBuild,
+    parallel(
+      processMarkup,
+      processStyles,
+      processScripts,
+      createStack,
+      copyStatic,
+    ),
+  )(done);
 }
 
-// Watcher
-
-const watcher = () => {
-  gulp.watch('source/sass/**/*.scss', gulp.series(styles));
-  gulp.watch('source/js/script.js', gulp.series(scripts));
-  gulp.watch('source/*.html', gulp.series(html, reload));
+export function runDev(done) {
+  series(
+    removeBuild,
+    parallel(
+      processMarkup,
+      processStyles,
+      processScripts,
+      createStack,
+      copyStatic
+    ),
+    startServer,
+  )(done);
 }
-
-// Build
-
-export const build = gulp.series(
-  clean,
-  copy,
-  optimizeImages,
-  gulp.parallel(
-    styles,
-    html,
-    scripts,
-    svg,
-    sprite,
-    createWebp
-  ),
-);
-
-// Default
-
-export default gulp.series(
-  clean,
-  copy,
-  copyImages,
-  gulp.parallel(
-    styles,
-    html,
-    scripts,
-    svg,
-    sprite,
-    createWebp
-  ),
-  gulp.series(
-    server,
-    watcher
-  ));

@@ -1,0 +1,120 @@
+.program-type__list {
+  max-width: 1220px;
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+
+  @media (min-width:$tablet-width) {
+    min-width: 708px;
+    min-height: 374px;
+  }
+
+  @media (min-width:$desktop-width) {
+    display: grid;
+    justify-content: space-between;
+
+    column-gap: 80px;
+
+    grid-template-columns: 570px 570px;
+  }
+}
+
+.program-type__item {
+  position: relative;
+
+  min-height: 266px;
+  margin: 0;
+  margin-bottom: 20px;
+  padding-top: 30px;
+
+  background-color: $basic-grey;
+
+  @media (min-width:$tablet-width) {
+    min-height: 372px;
+    padding-top: 77px;
+  }
+
+  @media (min-width:$desktop-width) {
+    min-height: 374px;
+
+  }
+}
+
+.program-type__title {
+  margin: 0;
+  margin: 0 0 29px 90px;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 37px;
+  font-family: $ff-other;
+  color: $black;
+  text-transform: uppercase;
+
+  @media (min-width:$tablet-width) {
+    min-width: 206px;
+    margin: 0 449px 24px 53px;
+
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width:$desktop-width) {
+    margin: 0 150px 73px 214px;
+  }
+}
+
+.program-type__text {
+  margin: 0;
+  margin: 0 33px 38px 20px;
+
+  @media (min-width:$tablet-width) {
+    margin: 0 316px 52px 52px;
+
+    font-size: 16px;
+    line-height: 24px;
+    font-family: $ff-main;
+  }
+
+  @media (min-width:$desktop-width) {
+    margin: 0 67px 27px 52px;
+
+  }
+}
+
+.program-type__link {
+  display: inline-block;
+  margin: 0 0 18px 20px;
+  padding-right: 52px;
+
+  font-size: 16px;
+  line-height: 16px;
+  font-family: $ff-other;
+  text-align: center;
+  color: $black;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  background: url("../../img/svg/icon-arrow-small.svg") right center;
+  background-repeat: no-repeat;
+
+  transition: 0.2s all;
+
+  &:hover {
+    background: url("../../img/svg/icon-arrow.svg") right center;
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width:$tablet-width) {
+    margin: 0 491px 53px 52px;
+  }
+
+  @media (min-width:$desktop-width) {
+    margin: 0 41px 59px 52px;
+    padding-right: 57px;
+  }
+}
+
+// Нет текстовых характеристик для ссылки
