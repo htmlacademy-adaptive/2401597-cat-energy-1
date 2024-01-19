@@ -4,6 +4,10 @@
   width: 100%;
   max-width: 280px;
   margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    max-width: 560px;
+  }
 }
 
 .slider__container {
@@ -11,21 +15,10 @@
 
   min-height: 256px;
   overflow: hidden;
-}
 
-.slider__item {
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  width: 50%;
-  height: 100%;
-  overflow: hidden;
-
-  background-color: $slider-grey;
-
-  @media (min-width: 768px) {
-    background-color: transparent;
+  @media (min-width: $tablet-width) {
+    height: 512px;
+    margin: 0 auto;
   }
 }
 
@@ -69,4 +62,48 @@
 
 .slider__item--after img {
   object-position: right;
+}
+
+.slider__change-btn {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  z-index: 3;
+
+  width: 4px;
+  padding: 0;
+
+  color: $special-grey2;
+
+  background-color: currentColor;
+  border: none;
+  border-radius: 2px;
+  transform: translateX(-50%);
+  cursor: pointer;
+
+  fill: currentColor;
+
+  & span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+
+    color: currentColor;
+
+    background-color: $white;
+    border: 2px solid currentColor;
+    border-radius: 20px;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+
+    fill: currentColor;
+  }
 }

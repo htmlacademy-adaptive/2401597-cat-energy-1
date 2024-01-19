@@ -6,4 +6,11 @@
   line-height: 40px;
   font-family: $ff-other;
   color: $black;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 10px;
+
+    font-size: 60px;
+    line-height: 60px;
+  }
 }

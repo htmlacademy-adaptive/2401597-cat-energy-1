@@ -1,0 +1,132 @@
+.control {
+  display: grid;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  gap: 12px;
+  grid-template-columns: 1fr;
+
+  &--radio {
+    @media (min-width: $tablet-width) {
+      padding: 24px 28px;
+
+      border: 1px solid #e7e7e7;
+
+    }
+  }
+
+  &--check {
+    @media (min-width: $tablet-width) {
+      gap: 33px 57px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: $desktop-width) {
+      gap: 33px 78px;
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+
+.control__item {
+  display: grid;
+  align-items: center;
+  min-height: 30px;
+
+  grid-template-columns: auto 1fr;
+
+  @media (min-width: $tablet-width) {
+    min-height: 40px;
+  }
+}
+
+.control__label {
+  padding-left: 15px;
+
+  font-size: 16px;
+  line-height: 18px;
+  font-family: $ff-other;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 20px;
+
+    font-size: 20px;
+    line-height: 30px;
+
+  }
+}
+
+.control__input {
+  position: relative;
+
+  width: 30px;
+  height: 30px;
+  margin: 0;
+
+  border: 1px solid #cdcdcd;
+
+  appearance: none;
+
+  @include hover-focus {
+    border-color: #bababa;
+  }
+
+  @include active {
+    opacity: 0.3;
+  }
+
+  @include disabled {
+    opacity: 0.3;
+
+    pointer-events: none;
+
+    &+.control__label {
+      opacity: 0.3;
+
+      pointer-events: none;
+
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.control__input[type="radio"] {
+  border-radius: 50%;
+
+  &:checked::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 13px;
+    height: 13px;
+
+    background-color: #68b738;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+
+    @media (min-width: $tablet-width) {
+      width: 18px;
+      height: 18px;
+    }
+  }
+}
+
+.control__input[type="checkbox"]:checked {
+  background-image: url("../../img/sprite.svg#icon-check");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 18px 14px;
+
+  @media (min-width: $tablet-width) {
+    background-size: 24px 19px;
+  }
+}

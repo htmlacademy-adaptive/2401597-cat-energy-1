@@ -1,35 +1,51 @@
 .page-header {
-  padding: 0;
+  position: relative;
+
+  color: $black;
 
   @media (min-width:$desktop-width) {
-    width: 1440px;
-    height: 694px;
-    margin-bottom: 82px;
+    color: $dark-grey3 ;
+  }
 
-    background-color: rgba(104, 183, 56, 0.85);
-    background-image: linear-gradient(rgba(104, 183, 56, 0.85),
-        rgba(104, 183, 56, 0.85)),
-      url("../../img/index-cat-desktop@2x.jpg");
-    background-repeat: no-repeat;
-    background-position: top right;
-    background-size: auto, cover;
+  &--home::after {
+    @media (min-width: $desktop-width) {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 50%;
+      z-index: -1;
+
+      background-image:
+        linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+        image-set(url("../../img/index-cat-desktop@2x.webp") type("image/webp") 2x, url("../../img/index-cat-desktop@1x.webp") type("image/webp") 1x, url("../../img/index-cat-desktop@2x.jpg") 2x, url("../../img/index-cat-desktop@1x.jpg") 1x);
+      background-repeat: no-repeat;
+      background-position: left;
+      background-size: cover;
+    }
   }
 }
 
 .page-header__container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  position: relative;
+
+  display: grid;
   align-items: center;
   min-height: 65px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+
+  gap: 20px;
+  grid-template-columns: repeat(2, auto);
 
   @media (min-width:$tablet-width) {
-    min-height: 75px;
+    align-items: start;
+    padding-top: 25px;
+    padding-bottom: 25px;
   }
 
   @media (min-width:$desktop-width) {
-    width: 1220px;
-    height: 110px;
-
+    grid-template-columns: repeat(2, 1fr);
   }
 }

@@ -2,18 +2,12 @@
   display: grid;
   justify-content: center;
   margin: 0;
-  margin-bottom: 40px;
 
   list-style-type: none;
 
   gap: 24px;
   grid-template-columns: repeat(3, auto);
 
-  @media (min-width:$tablet-width) {
-    align-content: center;
-    margin-bottom: 0;
-    padding: 0;
-  }
 }
 
 .social__link {

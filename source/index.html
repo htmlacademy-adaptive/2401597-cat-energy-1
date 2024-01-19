@@ -11,10 +11,10 @@
 <body>
   <div class="wrapper">
     <!--Шапка-->
-    <header class="page-header">
+    <header class="page-header page-header--home">
       <div class="page-header__container container">
         <a class="page-header__logo logo logo--header" href="index.html" aria-current="page">
-          <img src="./img/svg/logo-mobile-pic.svg" width="33" height="38" alt="Логотип картинка мобильная Кэт энерджи">
+          <img src="./img/svg/logo-pic-mobile.svg" width="33" height="38" alt="Логотип картинка мобильная Кэт энерджи">
           <svg width="101" height="18" aria-hidden="true" focusable="false">
             <use href="img/sprite.svg#logo-text"></use>
           </svg>
@@ -26,15 +26,15 @@
             <li class="nav__item nav__item--current">
               <a href="./index.html" aria-current="page">Главная</a>
             </li>
-            <li class="nav__item">
+            <li class="nav__item nav__item--home">
               <a href="./catalog.html">Каталог продукции</a>
             </li>
-            <li class="nav__item">
+            <li class="nav__item nav__item--home">
               <a href="./form.html">Подбор программы</a>
             </li>
           </ul>
           <button class="nav__toggle" type="button" aria-label="Открыть меню">
-            <span class="nav__toggle-icon "></span>
+            <span class="nav__toggle-icon"></span>
           </button>
         </nav>
       </div>
@@ -58,12 +58,14 @@
         <div class="program-type__container container">
           <h2 class="visually-hidden">Программа диет для котов</h2>
           <ul class="program-type__list">
-            <li class="program-type__item program-type__item--slim">
+            <li class="program-type__item ">
+              <img class="program-type__item--slim" src="./img/svg/cat-back.svg" width="50" height="50" alt="Похудение кота">
               <h3 class="program-type__title">Похудение</h3>
               <p class="program-type__text">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
               <a class="program-type__link" href="#">Каталог Slim</a>
             </li>
-            <li class="program-type__item program-type__item--pro">
+            <li class="program-type__item ">
+              <img class="program-type__item--pro" src="./img/svg/cat-back1.svg" width="67" height="50" alt="Похудение кота">
               <h3 class="program-type__title">Набор массы</h3>
               <p class="program-type__text">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
               <a class="program-type__link" href="#">Каталог Pro</a>
@@ -89,20 +91,20 @@
           <div class="example__content">
             <h2 class="example__title page-title">Живой пример</h2>
             <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-
-            <div class="example__result">
-              <ul class="example__list">
-                <li class="example__item">
-                  <p class="example__text example__text--target">5 кг</p>
-                  <p class="example__text example__text--type">Снижение веса</p>
-                </li>
-                <li class="example__item">
-                  <p class="example__text example__text--target">60 дней</p>
-                  <p class="example__text example__text--type">Затрачено времени</p>
-                </li>
-              </ul>
-              <p class="example__text example__text--price">Затраты на питание: <span>15 000 руб.</span></p>
-            </div>
+            <dl class="example__result">
+              <div class="example__item">
+                <dt class="example__value">5 кг</dt>
+                <dd class="example__def">Снижение веса</dd>
+              </div>
+              <div class="example__item">
+                <dt class="example__value">60 дней</dt>
+                <dd class="example__def">Затрачено времени</dd>
+              </div>
+              <div class="example__item example__item--price">
+                <dt class="example__value-price">15&nbsp;000 руб.</dt>
+                <dd class="example__def-price">Затраты на питание:</dd>
+              </div>
+            </dl>
           </div>
 
           <div class="example__slider slider">
@@ -123,7 +125,7 @@
 
     </main>
     <!--Секция футтер-->
-    <footer class="main-footer">
+    <footer class="footer">
       <!--Локация-->
       <section class="location location--index">
         <h2 class="visually-hidden">Местонахождение.</h2>
@@ -136,7 +138,7 @@
         <div class="location__iframe-container">
           <noscript>
             <a class="location__img" href="#">
-              <img src="./img/svg/location.svg" width="320" height="362" alt="Карта">
+              <img src="./img/location@1x.jpg" width="320" height="362" alt="Карта">
             </a>
           </noscript>
           <div class="location__iframe">
@@ -150,7 +152,7 @@
             <use href="img/sprite.svg#logo-text"></use>
           </svg>
         </a>
-        <ul class="social">
+        <ul class="footer__social social">
           <li class="social__item">
             <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
               <span class="visually-hidden">Мы в Вконтакте</span>
