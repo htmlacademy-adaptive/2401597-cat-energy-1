@@ -1,0 +1,124 @@
+.functional__container {
+  @media (max-width: 767px) {
+    padding: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+  }
+
+  @media (min-width: $desktop-width) {
+    align-items: start;
+    padding-bottom: 54px;
+
+    grid-template-columns: auto 1fr;
+  }
+}
+
+.functional__content {
+  padding: 30px 20px 160px;
+
+  text-align: center;
+  color: $white;
+
+  background-color: rgba(104, 183, 56, 0.85);
+  background-image: linear-gradient(rgba(104, 183, 56, 0.85),
+      rgba(104, 183, 56, 0.85)),
+    url("../../img/index-cat@1x.jpg");
+  background-repeat: repeat, no-repeat;
+  background-position: center;
+  background-size: auto, cover;
+
+  @media (min-width:$tablet-width) {
+    max-width: 545px;
+    padding: 38px 20px 50px 90px;
+
+    text-align: left;
+    color: $black;
+
+    background: none;
+  }
+
+  @media (min-width:$desktop-width) {
+    padding: 85px 20px 52px 80px;
+  }
+}
+
+.functional__title {
+  margin-bottom: 25px;
+
+  color: inherit;
+
+  @media (max-width: 767px) {
+    line-height: 36px;
+  }
+}
+
+.functional__text {
+  margin: 0;
+
+  line-height: 14px;
+  font-family: $ff-other;
+  text-transform: uppercase;
+
+  @media (min-width:$tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.functional__image {
+  position: relative;
+
+  width: 280px;
+  height: 270px;
+  margin: -135px auto 0;
+
+  & img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (min-width:$tablet-width) {
+    position: relative;
+    z-index: -1;
+
+    order: 1;
+    width: 100%;
+    max-width: 709px;
+    height: 609px;
+    margin: -83px auto 0;
+  }
+
+  @media (min-width:$desktop-width) {
+    z-index: auto;
+
+    order: unset;
+    width: 552px;
+    height: 499px;
+    margin: 3px 0 0 -98px;
+
+    grid-column: -2 / -1;
+    grid-row: 1 / 4;
+  }
+}
+
+.functional__button {
+  display: block;
+  width: 280px;
+  margin: 0 auto;
+
+  @media (min-width:$tablet-width) {
+    width: 244px;
+
+    font-size: 20px;
+    line-height: 26px;
+
+    ing: 17px 10px;
+  }
+
+  @media (min-width:$desktop-width) {
+    margin-bottom: 80px;
+  }
+}
