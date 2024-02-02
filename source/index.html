@@ -20,16 +20,16 @@
           </svg>
         </a>
         <!--Навигация-->
-        <nav class="nav">
+        <nav class="nav nav--home">
 
           <ul class="nav__list">
             <li class="nav__item nav__item--current">
               <a href="./index.html" aria-current="page">Главная</a>
             </li>
-            <li class="nav__item nav__item--home">
+            <li class="nav__item">
               <a href="./catalog.html">Каталог продукции</a>
             </li>
-            <li class="nav__item nav__item--home">
+            <li class="nav__item">
               <a href="./form.html">Подбор программы</a>
             </li>
           </ul>
@@ -46,7 +46,11 @@
             <p class="functional__text">Занялся собой? Займись котом!</p>
           </div>
           <div class="functional__image">
-            <img width="280" height="270" src="./img/functional-mobile@1x.png" alt="CAT ENERGY курица">
+            <picture>
+              <source media="(min-width: 1260px)" srcset="./img/functional-desktop@1x.png, img/functional-desktop@2x.png">
+              <source media="(min-width:768px)" srcset="./img/functional-tablet@1x.png, img/functional-tablet@2x.png">
+              <img width="280" height="270" src="./img/functional-mobile@1x.png" srcset="./img/functional-mobile@2x.png" alt="CAT ENERGY курица">
+            </picture>
           </div>
           <a class="functional__button button" href="./form.html">Подобрать программу</a>
         </div>
@@ -58,14 +62,12 @@
         <div class="program-type__container container">
           <h2 class="visually-hidden">Программа диет для котов</h2>
           <ul class="program-type__list">
-            <li class="program-type__item ">
-              <img class="program-type__item--slim" src="./img/svg/cat-back.svg" width="50" height="50" alt="Похудение кота">
+            <li class="program-type__item-img program-type__item-img--slim">
               <h3 class="program-type__title">Похудение</h3>
               <p class="program-type__text">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
               <a class="program-type__link" href="#">Каталог Slim</a>
             </li>
-            <li class="program-type__item ">
-              <img class="program-type__item--pro" src="./img/svg/cat-back1.svg" width="67" height="50" alt="Похудение кота">
+            <li class="program-type__item-img program-type__item-img--pro">
               <h3 class="program-type__title">Набор массы</h3>
               <p class="program-type__text">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
               <a class="program-type__link" href="#">Каталог Pro</a>
@@ -110,15 +112,20 @@
           <div class="example__slider slider">
             <div class="slider__container">
               <div class="slider__item slider__item--before">
-                <img src="./img/slider-before-mobile@1x.png" width="280" height="256" alt="Кот до диеты">
+                <picture>
+                  <source media="(min-width:768px)" srcset="./img/slider-before-tablet@1x.png, img/slider-before-tablet@2x.png">
+                  <img src="./img/slider-before-mobile@1x.png" srcset="./img/slider-before-mobile@2x.png" width="280" height="256" alt="Кот до диеты">
+                </picture>
+
               </div>
               <div class="slider__item slider__item--after">
-                <img src="./img/slider-after-mobile@1x.png" width="280" height="256" alt="Кот после диеты">
+                <picture>
+                  <source media="(min-width:768px)" srcset="./img/slider-after-tablet@1x.png, img/slider-after-tablet@2x.png">
+                  <img src="./img/slider-after-mobile@1x.png" srcset="./img/slider-after-mobile@2x.png" width="280" height="256" alt="Кот после диеты">
+                </picture>
               </div>
             </div>
-            <button class="slider__change-btn" type="button">
-              <span></span>
-            </button>
+            <button class="slider__change-btn" type="button" aria-label="Изменения слайдера"></button>
           </div>
         </div>
       </section>
@@ -138,7 +145,7 @@
         <div class="location__iframe-container">
           <noscript>
             <a class="location__img" href="#">
-              <img src="./img/location@1x.jpg" width="320" height="362" alt="Карта">
+              <img src="./img/location@1x.jpg, img/location@2x.jpg" width="320" height="362" alt="Карта">
             </a>
           </noscript>
           <div class="location__iframe">
