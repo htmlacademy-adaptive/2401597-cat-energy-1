@@ -1,0 +1,37 @@
+.program-form__container {
+  padding: 25px 20px 17px;
+
+  @media (min-width: $tablet-width) {
+    padding: 38px 70px 44px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 50px 20px 44px;
+  }
+}
+
+.program-form__title {
+  margin-bottom: 37px;
+
+  @media (min-width:$tablet-width) {
+    margin-bottom: 44px;
+  }
+}
+
+.program-form__text {
+  max-width: 270px;
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 18px;
+  font-family: $ff-other;
+  color: $black;
+  text-transform: uppercase;
+
+  @media (min-width:$tablet-width) {
+    max-width: 390px;
+
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
