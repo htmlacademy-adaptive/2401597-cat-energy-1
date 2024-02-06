@@ -20,12 +20,4 @@
   color: $special-grey2;
 
   fill: currentColor;
-  @include hover-focus {
-    color: $basic-green;
-  }
-  @include active {
-    color: $basic-green;
-
-    opacity: 0.3;
-  }
 }

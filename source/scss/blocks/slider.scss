@@ -82,8 +82,9 @@
   transform: translateX(-50%);
   cursor: pointer;
 
-  &::after {
-    content: "";
+  fill: currentColor;
+
+  & span {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -101,27 +102,8 @@
     border: 2px solid currentColor;
     border-radius: 20px;
     transform: translate(-50%, -50%);
-  }
+    cursor: pointer;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 3;
-
-    width: 24px;
-    height: 18px;
-
-    background-color: currentColor;
-    transform: translate(-50%, -50%);
-
-    mask-image: url("../../img/svg/slider.svg");
-    mask-position: center;
-    mask-repeat: no-repeat;
-  }
-
-  &:hover {
-    color: #ff0000;
+    fill: currentColor;
   }
 }
