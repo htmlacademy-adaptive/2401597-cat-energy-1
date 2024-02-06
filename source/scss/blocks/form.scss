@@ -125,6 +125,8 @@
   &--comment {
     padding: 36px 20px 20px;
 
+    border-top: 2px solid $basic-green;
+
     @media (min-width: $tablet-width) {
       padding: 82px 70px 65px;
     }

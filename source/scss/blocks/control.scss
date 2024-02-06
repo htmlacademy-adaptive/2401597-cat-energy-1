@@ -66,18 +66,15 @@
   height: 30px;
   margin: 0;
 
-  border: 1px solid #cdcdcd;
+  border: 1px solid $special-grey;
 
   appearance: none;
-
   @include hover-focus {
-    border-color: #bababa;
+    border-color: $special-grey5;
   }
-
   @include active {
     opacity: 0.3;
   }
-
   @include disabled {
     opacity: 0.3;
 
