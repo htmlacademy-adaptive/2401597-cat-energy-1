@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Кэт энерджи</title>
   <link rel="stylesheet" href="./css/styles.css">
+  <link rel="icon" href="./favicons/32.png">
 </head>
 
 <body>
@@ -14,7 +15,11 @@
     <header class="page-header">
       <div class="page-header__container container">
         <a class="page-header__logo logo logo--header" href="index.html">
-          <img class="logo__img" src="./img/svg/logo-pic-mobile.svg" width="33" height="38" alt="Логотип картинка мобильная Кэт энерджи">
+          <picture>
+            <source media="(min-width:768px)" srcset="./img/sprite.svg#logo-pic-tablet">
+            <source media="(min-width: 1260px)" srcset="./img/sprite.svg#logo-pic-desctop">
+            <img src="./img/sprite.svg#logo-pic-mobile" width="33" height="38" alt="Логотип картинка мобильная Кэт энерджи">
+          </picture>
           <svg width="101" height="18" aria-hidden="true" focusable="false">
             <use href="img/sprite.svg#logo-text"></use>
           </svg>
@@ -169,25 +174,25 @@
           <li class="social__item">
             <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
               <span class="visually-hidden">Мы в Вконтакте</span>
-              <img src="./img/svg/vkontakte.svg" width="28" height="22" alt="Вконтакте">
+              <img src="./img/sprite.svg#vkontakte" width="28" height="22" alt="Вконтакте">
             </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
               <span class="visually-hidden">Мы в Ютубе</span>
-              <img src="./img/svg/youtube.svg" width="28" height="22" alt="Ютубе">
+              <img src="img/sprite.svg#youtube" width="28" height="22" alt="Ютубе">
             </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
               <span class="visually-hidden">Мы в Телеграме</span>
-              <img src="./img/svg/telegram.svg" width="28" height="22" alt="Телеграме">
+              <img src="./img/sprite.svg#telegram" width="28" height="22" alt="Телеграме">
             </a>
           </li>
         </ul>
         <a class="footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive">
           <span class="copyright__text">HTML Academy</span>
-          <img class="copyright__img" src="./img/svg/logo-html.svg" width="27" height="34" alt="Логотип HTML Academy">
+          <img class="copyright__img" src="./img/sprite.svg#logo-html" width="27" height="34" alt="Логотип HTML Academy">
         </a>
       </div>
     </footer>

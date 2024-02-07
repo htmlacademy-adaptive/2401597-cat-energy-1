@@ -69,3 +69,7 @@
 
   border: none;
 }
+
+.nojs .location__iframe {
+  display: none;
+}

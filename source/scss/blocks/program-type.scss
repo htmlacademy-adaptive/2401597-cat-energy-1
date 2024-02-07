@@ -29,7 +29,7 @@
   background-repeat: no-repeat;
 
   &--slim {
-    background-image: url("../../img/svg/cat-back.svg");
+    background-image: url("../../img/sprite.svg#cat-back");
     background-repeat: no-repeat;
     background-position: left 20px top 21px;
     background-size: 50px 50px;
@@ -46,7 +46,7 @@
   }
 
   &--pro {
-    background-image: url("../../img/svg/cat-back1.svg");
+    background-image: url("../../img/sprite.svg#cat-back1");
     background-repeat: no-repeat;
     background-position: left 13px top 24px;
     background-size: 67px 50px;

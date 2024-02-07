@@ -26,6 +26,21 @@
   }
 }
 
+.nojs .nav {
+  grid-column: 1 / -1;
+}
+
+.nojs .nav__list {
+  position: static;
+
+  display: block;
+  margin: 0 -20px;
+}
+
+.nojs .nav__toggle {
+  display: none;
+}
+
 .nav.is-open .nav__list {
   @media (max-width:$mobile-only) {
     display: block;
@@ -176,9 +191,7 @@
 
       background: $basic-green;
 
-      @media (min-width:$desktop-width) {
-        background: $dark-grey;
-      }
+
     }
   }
 }
