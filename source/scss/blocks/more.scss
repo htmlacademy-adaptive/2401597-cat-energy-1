@@ -1,5 +1,5 @@
 .more {
-  padding: 25px 0 35px;
+  padding: 25px 0 34px;
 }
 
 .more__inner {
@@ -31,7 +31,7 @@
 
 .more__list {
   margin: 0;
-  padding: 0;
+  padding: 0 0 34px;
 
   list-style: none;
 }
@@ -39,7 +39,7 @@
 .more__item {
   display: grid;
   justify-content: space-between;
-  padding: 13px 0 18px;
+  padding: 15px 0 15px;
 
   border-bottom: 1px solid $special-grey1;
 
@@ -118,7 +118,7 @@
 
 .more__present {
   margin: 0;
-  padding: 172px 20px 26px;
+  padding: 172px 20px 28px;
 
   font-size: 16px;
   line-height: 20px;

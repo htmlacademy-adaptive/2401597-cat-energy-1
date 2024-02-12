@@ -149,19 +149,19 @@
   }
 
   &--submit {
-    padding: 15px 20px 32px;
+    padding: 14px 20px 32px;
 
     @media (min-width: $tablet-width) {
       display: grid;
       align-items: center;
-      padding: 34px 70px 62px;
+      padding: 35px 70px 62px;
 
       gap: 20px 60px;
       grid-template-columns: repeat(2, 1fr);
     }
 
     @media (min-width: $desktop-width) {
-      padding: 24px 110px 82px;
+      padding: 26px 102px 82px;
 
       gap: 20px 80px;
     }

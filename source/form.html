@@ -12,8 +12,8 @@
 <body>
   <div class="wrapper">
     <!--Шапка-->
-    <header class="page-header">
-      <div class="page-header__container container">
+    <header class="page-header page-header--form ">
+      <div class="page-header__container  container">
         <a class="page-header__logo logo logo--header" href="index.html">
           <picture>
             <source media="(min-width:768px)" srcset="./img/sprite.svg#logo-pic-tablet">
@@ -144,7 +144,7 @@
     <!--Секция футтер-->
     <footer class="footer">
       <!--Локация-->
-      <section class="location">
+      <section class="location location--form">
         <h2 class="visually-hidden">Местонахождение.</h2>
         <div class="location__container container">
           <div class="location__contacts contacts">
@@ -154,6 +154,12 @@
         </div>
         <div class="location__iframe-container">
           <noscript>
+            <source media="(min-width: 1260px)" type="image/webp" srcset="./img/location-desktop@1x.webp, ./img/location-desktop@2x.webp" width="1440" height="400">
+            <source media="(min-width: 768px)" type="image/webp" srcset="./img/location-tablet@1x.webp, ./img/location-tablet@2x.webp" width="768" height="400">
+            <source type="image/webp" srcset="./img/location-mobile@1x.webp, ./img/location-mobile@2x.webp">
+            <source media="(min-width: 1260px)" type="image/webp" srcset="./img/location-desktop@1x.jpg, ./img/location-desktop@2x.jpg" width="1440" height="400">
+            <source media="(min-width: 768px)" type="image/webp" srcset="./img/location-tablet@1x.jpg, ./img/location-tablet@2x.jpg" width="768" height="400">
+            <source type="image/webp" srcset="./img/location-mobile@1x.jpg, ./img/location-mobile@2x.jpg">
             <a class="location__img" href="#">
               <img src="./img/location@1x.jpg" width="320" height="362" alt="Карта">
             </a>

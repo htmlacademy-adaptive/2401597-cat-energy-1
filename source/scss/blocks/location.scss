@@ -3,11 +3,28 @@
 
   background-color: $basic-grey;
 
-  @media (min-width: $desktop-width) {
-    padding: 95px 0 106px;
+  &--index {
+    background-color: $white;
+  }
 
-    &--index {
-      background-color: $white;
+  @media (min-width: $tablet-width) {
+    padding: 8px 0 0;
+
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 64px 0 117px;
+
+  }
+
+  &--form {
+    @media (min-width: $desktop-width) {
+      padding: 94px 0 117px;
+
     }
   }
 }

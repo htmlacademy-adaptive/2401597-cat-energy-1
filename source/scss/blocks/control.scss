@@ -69,12 +69,15 @@
   border: 1px solid $special-grey;
 
   appearance: none;
+
   @include hover-focus {
     border-color: $special-grey5;
   }
+
   @include active {
     opacity: 0.3;
   }
+
   @include disabled {
     opacity: 0.3;
 
@@ -111,6 +114,9 @@
     transform: translate(-50%, -50%);
 
     @media (min-width: $tablet-width) {
+      top: 41%;
+      left: 46%;
+
       width: 18px;
       height: 18px;
     }

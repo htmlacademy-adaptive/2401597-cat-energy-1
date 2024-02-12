@@ -9,14 +9,14 @@
 
   @media (min-width: $desktop-width) {
     align-items: start;
-    padding-bottom: 54px;
+    padding-bottom: 55px;
 
     grid-template-columns: auto 1fr;
   }
 }
 
 .functional__content {
-  padding: 30px 20px 160px;
+  padding: 29px 20px 162px;
 
   text-align: center;
   color: $white;
@@ -40,17 +40,18 @@
   }
 
   @media (min-width:$desktop-width) {
-    padding: 85px 20px 52px 80px;
+    padding: 87px 20px 50px 80px;
   }
 }
 
 .functional__title {
-  margin-bottom: 25px;
+  margin-bottom: 24px;
 
   color: inherit;
 
   @media (max-width: 767px) {
     line-height: 36px;
+
   }
 }
 
@@ -72,7 +73,7 @@
 
   width: 280px;
   height: 270px;
-  margin: -135px auto 0;
+  margin: -132px auto 0;
 
   & img {
     display: block;
@@ -97,7 +98,7 @@
     order: unset;
     width: 552px;
     height: 499px;
-    margin: 3px 0 0 -98px;
+    margin: 7px 0 -7px -98px;
 
     grid-column: -2 / -1;
     grid-row: 1 / 4;
@@ -112,13 +113,13 @@
   @media (min-width:$tablet-width) {
     width: 244px;
     margin-left: 90px;
-    padding: 17px 10px;
+    padding: 14px 10px;
 
     font-size: 20px;
     line-height: 26px;
   }
 
   @media (min-width:$desktop-width) {
-    margin-bottom: 0 0 80px 90px;
+    margin: 0 0 0 80px;
   }
 }

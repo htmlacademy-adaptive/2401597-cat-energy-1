@@ -1,9 +1,13 @@
 .product__header {
   @media (max-width: $mobile-only) {
     margin: 0 -20px;
-    padding: 25px 20px 39px;
+    padding: 25px 20px 38px;
 
     border-bottom: 1px solid $special-grey1;
+  }
+
+  @media (min-width:$tablet-width) {
+    padding: 41px 0 0;
   }
 }
 
@@ -20,6 +24,7 @@
   @media (min-width:$tablet-width) {
     display: grid;
     padding-top: 44px;
+    padding-bottom: 47px;
 
     gap: 30px 60px;
     grid-template-columns: repeat(2, 1fr);
@@ -35,10 +40,12 @@
 .product__item {
   position: relative;
 
+  margin-bottom: -2px;
+
   border: 1px solid $special-grey1;
 
   @media (min-width:$tablet-width) {
-    padding-top: 111px;
+    padding-top: 101px;
 
     border: none;
   }

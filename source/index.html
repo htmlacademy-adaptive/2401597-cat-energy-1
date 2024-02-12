@@ -52,6 +52,9 @@
           </div>
           <div class="functional__image">
             <picture>
+              <source media="(min-width: 1260px)" type="image/webp" srcset="./img/functional-desktop@1x.webp, ./img/functional-desktop@2x.webp">
+              <source media="(min-width: 768px)" type="image/webp" srcset="./img/functional-tablet@1x.webp, ./img/functional-tablet@2x.webp">
+              <source type="image/webp" srcset="./img/functional-mobile@1x.webp, ./img/functional-mobile@2x.webp">
               <source media="(min-width: 1260px)" srcset="./img/functional-desktop@1x.png, img/functional-desktop@2x.png">
               <source media="(min-width:768px)" srcset="./img/functional-tablet@1x.png, img/functional-tablet@2x.png">
               <img width="280" height="270" src="./img/functional-mobile@1x.png" srcset="./img/functional-mobile@2x.png" alt="CAT ENERGY курица">
@@ -118,6 +121,8 @@
             <div class="slider__container">
               <div class="slider__item slider__item--before">
                 <picture>
+
+                  <source media="(min-width: 768px)" type="image/webp" srcset="./img/slider-before-tablet@1x.webp, ./img/slider-before-tablet@2x.webp" width="280" height="256">
                   <source media="(min-width:768px)" srcset="./img/slider-before-tablet@1x.png, img/slider-before-tablet@2x.png">
                   <img src="./img/slider-before-mobile@1x.png" srcset="./img/slider-before-mobile@2x.png" width="280" height="256" alt="Кот до диеты">
                 </picture>
@@ -125,6 +130,8 @@
               </div>
               <div class="slider__item slider__item--after">
                 <picture>
+                  <source media="(min-width: 768px)" type="image/webp" srcset="./img/slider-after-tablet@1x.webp, ./img/slider-after-tablet@2x.webp" width="280" height="256">
+                  <source media="(min-width:768px)" srcset="./img/slider-after-tablet@1x.png, img/slider-after-tablet@2x.png">
                   <img src="./img/slider-after-tablet@1x.png" srcset="./img/slider-after-tablet@2x.png" width="280" height="256" alt="Кот после диеты">
                 </picture>
               </div>
@@ -148,6 +155,12 @@
         </div>
         <div class="location__iframe-container">
           <noscript>
+            <source media="(min-width: 1260px)" type="image/webp" srcset="./img/location-desktop@1x.webp, ./img/location-desktop@2x.webp" width="1440" height="400">
+            <source media="(min-width: 768px)" type="image/webp" srcset="./img/location-tablet@1x.webp, ./img/location-tablet@2x.webp" width="768" height="400">
+            <source type="image/webp" srcset="./img/location-mobile@1x.webp, ./img/location-mobile@2x.webp">
+            <source media="(min-width: 1260px)" type="image/webp" srcset="./img/location-desktop@1x.jpg, ./img/location-desktop@2x.jpg" width="1440" height="400">
+            <source media="(min-width: 768px)" type="image/webp" srcset="./img/location-tablet@1x.jpg, ./img/location-tablet@2x.jpg" width="768" height="400">
+            <source type="image/webp" srcset="./img/location-mobile@1x.jpg, ./img/location-mobile@2x.jpg">
             <a class="location__img" href="#">
               <img src="./img/location@1x.jpg" srcset="./img/location@2x.jpg" width="320" height="362" alt="Карта">
             </a>
