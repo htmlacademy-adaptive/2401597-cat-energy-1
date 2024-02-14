@@ -14,19 +14,22 @@
 
     grid-template-columns: repeat(3, 1fr);
   }
+
+  @media (min-width:$desktop-width) {
+    padding-top: 67px;
+    padding-bottom: 65px;
+  }
 }
 
 .footer__logo {
   display: block;
   width: 128px;
   height: 24px;
-  margin: 0 auto;
   margin: 0 auto 19px;
 
   @media (min-width:$tablet-width) {
     margin: 0;
   }
-
 }
 
 .footer__social {
@@ -58,6 +61,14 @@
 
   fill: $special-grey2;
   gap: 20px;
+
+  @include hover-focus {
+    fill: $basic-green;
+  }
+
+  @include active {
+    opacity: 0.3;
+  }
 
   @media (min-width: $tablet-width) {
     align-items: center;

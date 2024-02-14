@@ -4,20 +4,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./favicons/32.png">
   <title>Кэт энерджи</title>
   <link rel="stylesheet" href="./css/styles.css">
-  <link rel="icon" href="./favicons/32.png">
 </head>
 
 <body>
   <div class="wrapper">
     <!--Шапка-->
-    <header class="page-header page-header--form ">
-      <div class="page-header__container  container">
+    <header class="page-header page-header--form">
+      <div class="page-header__container container">
         <a class="page-header__logo logo logo--header" href="index.html">
           <picture>
-            <source media="(min-width:768px)" srcset="./img/sprite.svg#logo-pic-tablet">
             <source media="(min-width: 1260px)" srcset="./img/sprite.svg#logo-pic-desctop">
+            <source media="(min-width:768px)" srcset="./img/sprite.svg#logo-pic-tablet">
             <img src="./img/sprite.svg#logo-pic-mobile" width="33" height="38" alt="Логотип картинка мобильная Кэт энерджи">
           </picture>
           <svg width="101" height="18" aria-hidden="true" focusable="false">
@@ -25,13 +25,12 @@
           </svg>
         </a>
         <!--Навигация-->
-        <nav class="nav nav--home">
-
+        <nav class="nav">
           <ul class="nav__list">
-            <li class="nav__item ">
+            <li class="nav__item">
               <a href="./index.html">Главная</a>
             </li>
-            <li class="nav__item ">
+            <li class="nav__item">
               <a href="./catalog.html">Каталог продукции</a>
             </li>
             <li class="nav__item nav__item--current">
@@ -90,7 +89,7 @@
               </fieldset>
             </div>
             <fieldset class="form__group form__group--contacts form__group--lines">
-              <legend class="form__legend">Контактные данные<br>(владельца кота)</legend>
+              <legend class="form__legend">Контактные данные <br>(владельца кота)</legend>
               <ul class="form__list form__list--contact">
                 <li class="form__item">
                   <label class="form__label" for="email">E-mail:<sup>*</sup></label>

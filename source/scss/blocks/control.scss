@@ -10,10 +10,9 @@
 
   &--radio {
     @media (min-width: $tablet-width) {
-      padding: 24px 28px;
+      padding: 24px 28px 27px;
 
-      border: 1px solid #e7e7e7;
-
+      border: 1px solid $input-grey;
     }
   }
 
@@ -109,14 +108,11 @@
     width: 13px;
     height: 13px;
 
-    background-color: #68b738;
+    background-color: $basic-green;
     border-radius: 50%;
     transform: translate(-50%, -50%);
 
     @media (min-width: $tablet-width) {
-      top: 41%;
-      left: 46%;
-
       width: 18px;
       height: 18px;
     }

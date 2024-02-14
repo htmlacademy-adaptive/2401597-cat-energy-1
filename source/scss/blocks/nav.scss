@@ -24,7 +24,6 @@
     background-color: transparent;
 
     gap: 33px;
-
   }
 
   @media (min-width: $desktop-width) {
@@ -62,7 +61,7 @@
 
 .nav__item a {
   display: block;
-  padding: 20px 20px 20px;
+  padding: 22px 22px 23px;
 
   font-size: 20px;
   line-height: 20px;
@@ -90,6 +89,12 @@
   @media (min-width:$desktop-width) {
     font-size: 20px;
     line-height: 30px;
+  }
+}
+
+.nav--home a {
+  @media (min-width:$desktop-width) {
+    color: $white;
   }
 }
 
@@ -197,8 +202,6 @@
       height: 2px;
 
       background: $basic-green;
-
-
     }
   }
 }

@@ -13,6 +13,9 @@
 .it-work__title {
   margin-bottom: 39px;
 
+  @media (min-width:$desktop-width) {
+    margin-bottom: 41px;
+  }
 }
 
 .it-work__list {

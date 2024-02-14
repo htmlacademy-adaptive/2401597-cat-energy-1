@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./favicons/32.png">
   <title>Кэт энерджи</title>
   <link rel="stylesheet" href="./css/styles.css">
-  <link rel="icon" href="./favicons/32.png">
 </head>
 
 <body class="nojs">
@@ -16,7 +16,7 @@
       <div class="page-header__container container">
         <a class="page-header__logo logo logo--header">
           <picture>
-            <source media="(min-width: 1260px)" srcset="./img/sprite.svg#logo-pic-desctop">
+            <source media="(min-width: 1260px)" srcset="./img/sprite.svg#logo-pic-desktop">
             <source media="(min-width:768px)" srcset="./img/sprite.svg#logo-pic-tablet">
             <img src="./img/sprite.svg#logo-pic-mobile" width="33" height="38" alt="Логотип картинка мобильная Кэт энерджи">
           </picture>
@@ -26,7 +26,6 @@
         </a>
         <!--Навигация-->
         <nav class="nav nav--home">
-
           <ul class="nav__list">
             <li class="nav__item nav__item--current">
               <a href="./index.html" aria-current="page">Главная</a>
@@ -91,7 +90,7 @@
             <li class="it-work__item it-work__item--icon-leaf">Функциональное питание содержит только полезные питательные вещества.</li>
             <li class="it-work__item it-work__item--icon-water">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</li>
             <li class="it-work__item it-work__item--icon-eat">Замените один-два приема обычной еды на наше функциональное питание.</li>
-            <li class="it-work__item it-work__item--icon-timer">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</li>
+            <li class="it-work__item it-work__item--icon-timer">Уже через месяц наслаждайтесь изменениями к лучшему вашего&nbsp;питомца!</li>
           </ul>
         </div>
       </section>
@@ -116,22 +115,17 @@
               </div>
             </dl>
           </div>
-
           <div class="example__slider slider">
             <div class="slider__container">
               <div class="slider__item slider__item--before">
                 <picture>
-
-                  <source media="(min-width: 768px)" type="image/webp" srcset="./img/slider-before-tablet@1x.webp, ./img/slider-before-tablet@2x.webp" width="280" height="256">
-                  <source media="(min-width:768px)" srcset="./img/slider-before-tablet@1x.png, img/slider-before-tablet@2x.png">
-                  <img src="./img/slider-before-mobile@1x.png" srcset="./img/slider-before-mobile@2x.png" width="280" height="256" alt="Кот до диеты">
+                  <source type="image/webp" srcset="./img/slider-before-tablet@1x.webp, ./img/slider-before-tablet@2x.webp" width="280" height="256">
+                  <img src="./img/slider-before-tablet@1x.png" srcset="./img/slider-before-tablet@2x.png" width="280" height="256" alt="Кот до диеты">
                 </picture>
-
               </div>
               <div class="slider__item slider__item--after">
                 <picture>
-                  <source media="(min-width: 768px)" type="image/webp" srcset="./img/slider-after-tablet@1x.webp, ./img/slider-after-tablet@2x.webp" width="280" height="256">
-                  <source media="(min-width:768px)" srcset="./img/slider-after-tablet@1x.png, img/slider-after-tablet@2x.png">
+                  <source type="image/webp" srcset="./img/slider-after-tablet@1x.webp, ./img/slider-after-tablet@2x.webp" width="280" height="256">
                   <img src="./img/slider-after-tablet@1x.png" srcset="./img/slider-after-tablet@2x.png" width="280" height="256" alt="Кот после диеты">
                 </picture>
               </div>
@@ -140,7 +134,6 @@
           </div>
         </div>
       </section>
-
     </main>
     <!--Секция футтер-->
     <footer class="footer">
@@ -180,7 +173,9 @@
           <li class="social__item">
             <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
               <span class="visually-hidden">Мы в Вконтакте</span>
-              <img src="./img/sprite.svg#vkontakte" width="28" height="22" alt="Вконтакте">
+              <svg width="28" height="22" aria-hidden="true" focusable="false">
+                <use href="img/sprite.svg#vkontakte"></use>
+              </svg>
             </a>
           </li>
           <li class="social__item">
@@ -194,13 +189,17 @@
           <li class="social__item">
             <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
               <span class="visually-hidden">Мы в Телеграме</span>
-              <img src="./img/sprite.svg#telegram" width="28" height="22" alt="Телеграме">
+              <svg width="28" height="22" aria-hidden="true" focusable="false">
+                <use href="img/sprite.svg#telegram"></use>
+              </svg>
             </a>
           </li>
         </ul>
         <a class="footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive">
           <span class="copyright__text">HTML Academy</span>
-          <img class="copyright__img" src="./img/sprite.svg#logo-html" width="27" height="34" alt="Логотип HTML Academy">
+          <svg width="27" height="34" aria-hidden="true" focusable="false">
+            <use href="img/sprite.svg#logo-html"></use>
+          </svg>
         </a>
       </div>
     </footer>
