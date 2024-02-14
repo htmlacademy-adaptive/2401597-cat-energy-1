@@ -3,12 +3,22 @@
 
   background-color: $basic-grey;
 
+  &--index {
+    background-color: $white;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 8px 0 0;
+
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+
   @media (min-width: $desktop-width) {
     padding: 95px 0 106px;
 
-    &--index {
-      background-color: $white;
-    }
   }
 }
 
@@ -68,4 +78,8 @@
   height: 100%;
 
   border: none;
+}
+
+.nojs .location__iframe {
+  display: none;
 }

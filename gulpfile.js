@@ -144,7 +144,7 @@ export function startServer() {
   watch(`${PATH_TO_SOURCE}scss/**/*.scss`, series(processStyles));
   watch(`${PATH_TO_SOURCE}js/**/*.js`, series(processScripts));
   watch(`${PATH_TO_SOURCE}img/sprite/**/*.svg`, series(createStack, reloadServer));
-  watch(`${PATH_TO_SOURCE}img/svg/**/*.svg`, series(optimizeVector, reloadServer));
+  // watch(`${PATH_TO_SOURCE}img/svg/**/*.svg`, series(optimizeVector, reloadServer));
   watch(PATHS_TO_STATIC, series(copyStatic, reloadServer));
 }
 

@@ -4,24 +4,28 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./favicons/32.png">
   <title>Кэт энерджи</title>
   <link rel="stylesheet" href="./css/styles.css">
 </head>
 
-<body>
+<body class="nojs">
   <div class="wrapper">
     <!--Шапка-->
     <header class="page-header page-header--home">
       <div class="page-header__container container">
-        <a class="page-header__logo logo logo--header" href="index.html" aria-current="page">
-          <img src="./img/svg/logo-pic-mobile.svg" width="33" height="38" alt="Логотип картинка мобильная Кэт энерджи">
+        <a class="page-header__logo logo logo--header">
+          <picture>
+            <source media="(min-width: 1260px)" srcset="./img/sprite.svg#logo-pic-desktop">
+            <source media="(min-width:768px)" srcset="./img/sprite.svg#logo-pic-tablet">
+            <img src="./img/sprite.svg#logo-pic-mobile" width="33" height="38" alt="Логотип картинка мобильная Кэт энерджи">
+          </picture>
           <svg width="101" height="18" aria-hidden="true" focusable="false">
             <use href="img/sprite.svg#logo-text"></use>
           </svg>
         </a>
         <!--Навигация-->
         <nav class="nav nav--home">
-
           <ul class="nav__list">
             <li class="nav__item nav__item--current">
               <a href="./index.html" aria-current="page">Главная</a>
@@ -47,6 +51,9 @@
           </div>
           <div class="functional__image">
             <picture>
+              <source media="(min-width: 1260px)" type="image/webp" srcset="./img/functional-desktop@1x.webp, ./img/functional-desktop@2x.webp">
+              <source media="(min-width: 768px)" type="image/webp" srcset="./img/functional-tablet@1x.webp, ./img/functional-tablet@2x.webp">
+              <source type="image/webp" srcset="./img/functional-mobile@1x.webp, ./img/functional-mobile@2x.webp">
               <source media="(min-width: 1260px)" srcset="./img/functional-desktop@1x.png, img/functional-desktop@2x.png">
               <source media="(min-width:768px)" srcset="./img/functional-tablet@1x.png, img/functional-tablet@2x.png">
               <img width="280" height="270" src="./img/functional-mobile@1x.png" srcset="./img/functional-mobile@2x.png" alt="CAT ENERGY курица">
@@ -83,7 +90,7 @@
             <li class="it-work__item it-work__item--icon-leaf">Функциональное питание содержит только полезные питательные вещества.</li>
             <li class="it-work__item it-work__item--icon-water">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</li>
             <li class="it-work__item it-work__item--icon-eat">Замените один-два приема обычной еды на наше функциональное питание.</li>
-            <li class="it-work__item it-work__item--icon-timer">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</li>
+            <li class="it-work__item it-work__item--icon-timer">Уже через месяц наслаждайтесь изменениями к лучшему вашего&nbsp;питомца!</li>
           </ul>
         </div>
       </section>
@@ -108,20 +115,18 @@
               </div>
             </dl>
           </div>
-
           <div class="example__slider slider">
             <div class="slider__container">
               <div class="slider__item slider__item--before">
                 <picture>
-                  <source media="(min-width:768px)" srcset="./img/slider-before-tablet@1x.png, img/slider-before-tablet@2x.png">
-                  <img src="./img/slider-before-mobile@1x.png" srcset="./img/slider-before-mobile@2x.png" width="280" height="256" alt="Кот до диеты">
+                  <source type="image/webp" srcset="./img/slider-before-tablet@1x.webp, ./img/slider-before-tablet@2x.webp" width="280" height="256">
+                  <img src="./img/slider-before-tablet@1x.png" srcset="./img/slider-before-tablet@2x.png" width="280" height="256" alt="Кот до диеты">
                 </picture>
-
               </div>
               <div class="slider__item slider__item--after">
                 <picture>
-                  <source media="(min-width:768px)" srcset="./img/slider-after-tablet@1x.png, img/slider-after-tablet@2x.png">
-                  <img src="./img/slider-after-mobile@1x.png" srcset="./img/slider-after-mobile@2x.png" width="280" height="256" alt="Кот после диеты">
+                  <source type="image/webp" srcset="./img/slider-after-tablet@1x.webp, ./img/slider-after-tablet@2x.webp" width="280" height="256">
+                  <img src="./img/slider-after-tablet@1x.png" srcset="./img/slider-after-tablet@2x.png" width="280" height="256" alt="Кот после диеты">
                 </picture>
               </div>
             </div>
@@ -129,7 +134,6 @@
           </div>
         </div>
       </section>
-
     </main>
     <!--Секция футтер-->
     <footer class="footer">
@@ -144,8 +148,14 @@
         </div>
         <div class="location__iframe-container">
           <noscript>
+            <source media="(min-width: 1260px)" type="image/webp" srcset="./img/location-desktop@1x.webp, ./img/location-desktop@2x.webp" width="1440" height="400">
+            <source media="(min-width: 768px)" type="image/webp" srcset="./img/location-tablet@1x.webp, ./img/location-tablet@2x.webp" width="768" height="400">
+            <source type="image/webp" srcset="./img/location-mobile@1x.webp, ./img/location-mobile@2x.webp">
+            <source media="(min-width: 1260px)" type="image/webp" srcset="./img/location-desktop@1x.jpg, ./img/location-desktop@2x.jpg" width="1440" height="400">
+            <source media="(min-width: 768px)" type="image/webp" srcset="./img/location-tablet@1x.jpg, ./img/location-tablet@2x.jpg" width="768" height="400">
+            <source type="image/webp" srcset="./img/location-mobile@1x.jpg, ./img/location-mobile@2x.jpg">
             <a class="location__img" href="#">
-              <img src="./img/location@1x.jpg, img/location@2x.jpg" width="320" height="362" alt="Карта">
+              <img src="./img/location@1x.jpg" srcset="./img/location@2x.jpg" width="320" height="362" alt="Карта">
             </a>
           </noscript>
           <div class="location__iframe">
@@ -163,25 +173,33 @@
           <li class="social__item">
             <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
               <span class="visually-hidden">Мы в Вконтакте</span>
-              <img src="./img/svg/vkontakte.svg" width="28" height="22" alt="Вконтакте">
+              <svg width="28" height="22" aria-hidden="true" focusable="false">
+                <use href="img/sprite.svg#vkontakte"></use>
+              </svg>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
               <span class="visually-hidden">Мы в Ютубе</span>
-              <img src="./img/svg/youtube.svg" width="28" height="22" alt="Ютубе">
+              <svg width="28" height="22" aria-hidden="true" focusable="false">
+                <use href="img/sprite.svg#youtube"></use>
+              </svg>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
               <span class="visually-hidden">Мы в Телеграме</span>
-              <img src="./img/svg/telegram.svg" width="28" height="22" alt="Телеграме">
+              <svg width="28" height="22" aria-hidden="true" focusable="false">
+                <use href="img/sprite.svg#telegram"></use>
+              </svg>
             </a>
           </li>
         </ul>
         <a class="footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive">
           <span class="copyright__text">HTML Academy</span>
-          <img class="copyright__img" src="./img/svg/logo-html.svg" width="27" height="34" alt="Логотип HTML Academy">
+          <svg width="27" height="34" aria-hidden="true" focusable="false">
+            <use href="img/sprite.svg#logo-html"></use>
+          </svg>
         </a>
       </div>
     </footer>

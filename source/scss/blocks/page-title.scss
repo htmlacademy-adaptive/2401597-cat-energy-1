@@ -8,9 +8,13 @@
   color: $black;
 
   @media (min-width: $tablet-width) {
-    padding-bottom: 10px;
+    padding-bottom: 19px;
 
     font-size: 60px;
     line-height: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 19px;
   }
 }

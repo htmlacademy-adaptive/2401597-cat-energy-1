@@ -19,11 +19,32 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: end;
+    margin-right: 6px;
 
     background-color: transparent;
 
     gap: 33px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 1px;
+  }
+
+}
+
+.nojs .nav {
+  grid-column: 1 / -1;
+}
+
+.nojs .nav__list {
+  position: static;
+
+  display: block;
+  margin: 0 -20px;
+}
+
+.nojs .nav__toggle {
+  display: none;
 }
 
 .nav.is-open .nav__list {
@@ -40,7 +61,7 @@
 
 .nav__item a {
   display: block;
-  padding: 23px 23px 22px;
+  padding: 22px 22px 23px;
 
   font-size: 20px;
   line-height: 20px;
@@ -59,7 +80,7 @@
   }
 
   @media (min-width:$tablet-width) {
-    padding: 14px 0;
+    padding: 14px 0 11px;
 
     font-size: 18px;
     line-height: 24px;
@@ -71,6 +92,12 @@
   }
 }
 
+.nav--home a {
+  @media (min-width:$desktop-width) {
+    color: $white;
+  }
+}
+
 .nav__item--current a {
   @media (min-width: $tablet-width) {
     position: relative;
@@ -78,9 +105,9 @@
     &::after {
       content: "";
       position: absolute;
-      right: 0;
-      bottom: 0;
-      left: 0;
+      right: 5px;
+      bottom: 4px;
+      left: -5px;
 
       height: 2px;
 
@@ -175,10 +202,6 @@
       height: 2px;
 
       background: $basic-green;
-
-      @media (min-width:$desktop-width) {
-        background: $dark-grey;
-      }
     }
   }
 }

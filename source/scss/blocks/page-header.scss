@@ -4,8 +4,6 @@
   color: $black;
 
   @media (min-width:$desktop-width) {
-    margin-bottom: 87px;
-
     color: $dark-grey3 ;
   }
 
@@ -15,7 +13,7 @@
       position: absolute;
       top: 0;
       right: 0;
-      bottom: 0;
+      bottom: -3px;
       left: 50%;
       z-index: -1;
 
@@ -27,6 +25,7 @@
       background-size: cover;
     }
   }
+
 }
 
 .page-header__container {
@@ -39,7 +38,7 @@
   padding-bottom: 12px;
 
   gap: 20px;
-  grid-template-columns: repeat(2, auto);
+  grid-template-columns: 1fr auto;
 
   @media (min-width:$tablet-width) {
     align-items: start;
@@ -48,6 +47,9 @@
   }
 
   @media (min-width:$desktop-width) {
+    padding-top: 56px;
+    padding-bottom: 22px;
+
     grid-template-columns: repeat(2, 1fr);
   }
 }

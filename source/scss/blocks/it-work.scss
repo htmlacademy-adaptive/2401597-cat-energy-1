@@ -1,9 +1,21 @@
 .it-work {
-  padding: 20px 0 49px;
+  padding: 0 0 49px;
+
+  @media(min-width:$tablet-width) {
+    padding: 24px 0 49px;
+  }
+
+  @media (min-width:$desktop-width) {
+    padding: 71px 0 0;
+  }
 }
 
 .it-work__title {
-  margin-bottom: 40px;
+  margin-bottom: 39px;
+
+  @media (min-width:$desktop-width) {
+    margin-bottom: 41px;
+  }
 }
 
 .it-work__list {
