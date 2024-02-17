@@ -1,6 +1,5 @@
 .logo {
   width: fit-content;
-
   color: $dark-grey3;
 
   --color-logo-text: $dark-grey3;
@@ -9,14 +8,11 @@
   &--header {
     display: grid;
     align-items: center;
-
     column-gap: 56px;
-
     grid-template-columns: auto 1fr;
 
     @include hover-focus {
       color: $dark-grey;
-
       opacity: 0.8;
     }
 
@@ -86,7 +82,6 @@
   @media (min-width: $desktop-width) {
     width: 118px;
     height: 21px;
-
   }
 }
 

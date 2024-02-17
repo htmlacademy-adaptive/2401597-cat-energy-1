@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="./favicons/32.png">
   <title>Кэт энерджи</title>
+  <link rel="preload" href="fonts/oswald/oswaldregular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/lato/Lato-Regular.woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/styles.css">
 </head>
 
@@ -51,11 +53,11 @@
           </div>
           <div class="functional__image">
             <picture>
-              <source media="(min-width: 1260px)" type="image/webp" srcset="./img/functional-desktop@1x.webp, ./img/functional-desktop@2x.webp">
-              <source media="(min-width: 768px)" type="image/webp" srcset="./img/functional-tablet@1x.webp, ./img/functional-tablet@2x.webp">
-              <source type="image/webp" srcset="./img/functional-mobile@1x.webp, ./img/functional-mobile@2x.webp">
-              <source media="(min-width: 1260px)" srcset="./img/functional-desktop@1x.png, img/functional-desktop@2x.png">
-              <source media="(min-width:768px)" srcset="./img/functional-tablet@1x.png, img/functional-tablet@2x.png">
+              <source media="(min-width: 1260px)" type="image/webp" srcset="./img/functional-desktop@1x.webp 1x, ./img/functional-desktop@2x.webp 2x">
+              <source media="(min-width: 768px)" type="image/webp" srcset="./img/functional-tablet@1x.webp 1x, ./img/functional-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="./img/functional-mobile@1x.webp 1x, ./img/functional-mobile@2x.webp 2x">
+              <source media="(min-width: 1260px)" srcset="./img/functional-desktop@1x.png 1x, img/functional-desktop@2x.png 2x">
+              <source media="(min-width:768px)" srcset="./img/functional-tablet@1x.png 1x, img/functional-tablet@2x.png 2x">
               <img width="280" height="270" src="./img/functional-mobile@1x.png" srcset="./img/functional-mobile@2x.png" alt="CAT ENERGY курица">
             </picture>
           </div>
@@ -119,13 +121,13 @@
             <div class="slider__container">
               <div class="slider__item slider__item--before">
                 <picture>
-                  <source type="image/webp" srcset="./img/slider-before-tablet@1x.webp, ./img/slider-before-tablet@2x.webp" width="280" height="256">
+                  <source type="image/webp" srcset="./img/slider-before-tablet@1x.webp 1x, ./img/slider-before-tablet@2x.webp 2x" width="280" height="256">
                   <img src="./img/slider-before-tablet@1x.png" srcset="./img/slider-before-tablet@2x.png" width="280" height="256" alt="Кот до диеты">
                 </picture>
               </div>
               <div class="slider__item slider__item--after">
                 <picture>
-                  <source type="image/webp" srcset="./img/slider-after-tablet@1x.webp, ./img/slider-after-tablet@2x.webp" width="280" height="256">
+                  <source type="image/webp" srcset="./img/slider-after-tablet@1x.webp 1x, ./img/slider-after-tablet@2x.webp 2x" width="280" height="256">
                   <img src="./img/slider-after-tablet@1x.png" srcset="./img/slider-after-tablet@2x.png" width="280" height="256" alt="Кот после диеты">
                 </picture>
               </div>
@@ -147,24 +149,26 @@
           </div>
         </div>
         <div class="location__iframe-container">
-          <noscript>
-            <source media="(min-width: 1260px)" type="image/webp" srcset="./img/location-desktop@1x.webp, ./img/location-desktop@2x.webp" width="1440" height="400">
-            <source media="(min-width: 768px)" type="image/webp" srcset="./img/location-tablet@1x.webp, ./img/location-tablet@2x.webp" width="768" height="400">
-            <source type="image/webp" srcset="./img/location-mobile@1x.webp, ./img/location-mobile@2x.webp">
-            <source media="(min-width: 1260px)" type="image/webp" srcset="./img/location-desktop@1x.jpg, ./img/location-desktop@2x.jpg" width="1440" height="400">
-            <source media="(min-width: 768px)" type="image/webp" srcset="./img/location-tablet@1x.jpg, ./img/location-tablet@2x.jpg" width="768" height="400">
-            <source type="image/webp" srcset="./img/location-mobile@1x.jpg, ./img/location-mobile@2x.jpg">
-            <a class="location__img" href="#">
-              <img src="./img/location@1x.jpg" srcset="./img/location@2x.jpg" width="320" height="362" alt="Карта">
-            </a>
-          </noscript>
+          <a class="location__img" href="#">
+            <noscript>
+              <picture>
+                <source media="(min-width: 1260px)" type="image/webp" srcset="./img/location-desktop@1x.webp 1x, ./img/location-desktop@2x.webp 2x" width="1440" height="400">
+                <source media="(min-width: 768px)" type="image/webp" srcset="./img/location-tablet@1x.webp 1x, ./img/location-tablet@2x.webp 2x" width="768" height="400">
+                <source type="image/webp" srcset="./img/location-mobile@1x.webp 1x, ./img/location-mobile@2x.webp 2x" width="320" height="362">
+                <source media="(min-width: 1260px)" type="image/jpg" srcset="./img/location-desktop@1x.jpg 1x, ./img/location-desktop@2x.jpg 2x" width="1440" height="400">
+                <source media="(min-width: 768px)" type="image/jpg" srcset="./img/location-tablet@1x.jpg 1x, ./img/location-tablet@2x.jpg 2x" width="768" height="400">
+                <img src="./img/location-mobile@1x.jpg" srcset="./img/location-mobile@2x.jpg" width="320" height="362" alt="Карта">
+              </picture>
+            </noscript>
+          </a>
           <div class="location__iframe">
             <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A64d0d6a5e167dd28cc04f5660d4eea6ab5fe538029ac590ae76cf7db752a1651&amp;source=constructor"></iframe>
           </div>
         </div>
       </section>
       <div class="footer__container container">
-        <a class="footer__logo logo logo--footer" href="./index.html" aria-current="page">
+        <a class="footer__logo logo logo--footer" href="./index.html">
+          <span class="visually-hidden">Переход на главную страницу</span>
           <svg width="101" height="18" aria-hidden="true" focusable="false">
             <use href="img/sprite.svg#logo-text"></use>
           </svg>
@@ -204,7 +208,6 @@
       </div>
     </footer>
   </div>
-
   <script src="js/script.js"></script>
 </body>
 

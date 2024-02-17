@@ -2,12 +2,9 @@
   display: grid;
   justify-content: center;
   margin: 0;
-
   list-style-type: none;
-
   gap: 24px;
   grid-template-columns: repeat(3, auto);
-
 }
 
 .social__link {
@@ -16,16 +13,15 @@
   align-items: center;
   width: 28px;
   height: 22px;
-
   color: $special-grey2;
-
   fill: currentColor;
+
   @include hover-focus {
     color: $basic-green;
   }
+
   @include active {
     color: $basic-green;
-
     opacity: 0.3;
   }
 }

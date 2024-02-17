@@ -1,17 +1,14 @@
 .example {
   padding: 26px 0 40px;
-
   background-color: $slider-grey;
 
-  @media (min-width:$tablet-width) {
+  @media (min-width: $tablet-width) {
     padding: 36px 0 102px;
-
     background-image: linear-gradient(0deg, $slider-grey 42.8%, $white 42%);
   }
 
   @media (min-width: $desktop-width) {
     padding: 61px 0 53px;
-
     background-image: linear-gradient(0deg, $basic-grey 70%, $white 70%);
   }
 }
@@ -20,7 +17,6 @@
   @media (min-width: $desktop-width) {
     display: grid;
     align-items: start;
-
     gap: 10px 227px;
     grid-template-columns: 433px 1fr;
   }
@@ -36,7 +32,6 @@
 
 .example__description {
   margin: 0;
-
   font-size: 14px;
   line-height: 18px;
 
@@ -54,20 +49,17 @@
   display: grid;
   margin: 0;
   padding: 20px 0 7px;
-
   gap: 27px 32px;
   grid-template-columns: repeat(2, 124px);
 
-  @media (min-width:$tablet-width) {
+  @media (min-width: $tablet-width) {
     padding: 55px 0 103px;
-
     gap: 33px 42px;
     grid-template-columns: 162px 162px 1fr;
   }
 
-  @media (min-width:$desktop-width) {
+  @media (min-width: $desktop-width) {
     padding: 70px 0 20px;
-
     gap: 60px 42px;
     grid-template-columns: repeat(2, 162px);
   }
@@ -75,11 +67,8 @@
 
 .example__item {
   position: relative;
-
   padding: 14px 10px 13px;
-
   text-align: center;
-
   border: 1px solid $special-grey;
   border-radius: 3px;
 
@@ -88,15 +77,12 @@
     flex-wrap: wrap;
     justify-content: center;
     padding-top: 7px;
-
     font-size: 14px;
     line-height: 20px;
     font-family: $ff-other;
     color: $black;
     text-transform: uppercase;
-
     border: none;
-
     gap: 3px;
     grid-column: 1 / -1;
 
@@ -104,10 +90,8 @@
       flex-direction: column;
       align-self: center;
       padding: 0;
-
       font-size: 20px;
       text-align: right;
-
       gap: 9px 3px;
       grid-column: -2 / -1;
     }
@@ -115,7 +99,6 @@
     @media (min-width: $desktop-width) {
       flex-direction: row;
       justify-content: start;
-
       gap: 9px 66px;
       grid-column: 1 / -1;
     }
@@ -138,21 +121,17 @@
 .example__def {
   margin: 8px 8px -29px;
   padding: 0 5px;
-
   font-size: 12px;
   line-height: 12px;
   text-transform: lowercase;
-
   background-color: $slider-grey;
 
   @media (min-width: $tablet-width) {
     width: fit-content;
     margin: 11px auto -19px;
     padding: 0 7px;
-
     font-size: 14px;
     line-height: 14px;
-
     background-color: $white;
   }
 

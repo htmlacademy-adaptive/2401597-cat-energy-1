@@ -1,17 +1,17 @@
 .more {
   padding: 27px 0 34px;
 
-  @media (min-width:$tablet-width) {
+  @media (min-width: $tablet-width) {
     padding: 24px 0 75px;
   }
 
-  @media (min-width:$desktop-width) {
+  @media (min-width: $desktop-width) {
     padding: 30px 0 16px;
   }
 }
 
 .more__inner {
-  @media (min-width:$desktop-width) {
+  @media (min-width: $desktop-width) {
     display: grid;
     align-items: start;
 
@@ -29,7 +29,7 @@
   font-family: $ff-other;
   color: $black;
 
-  @media (min-width:$tablet-width) {
+  @media (min-width: $tablet-width) {
     margin-bottom: 69px;
 
     font-size: 36px;
@@ -45,7 +45,7 @@
 
   border-top: 1px solid $special-grey1;
 
-  @media (min-width:$tablet-width) {
+  @media (min-width: $tablet-width) {
     padding-bottom: 70px;
   }
 }
@@ -60,7 +60,7 @@
   gap: 14px;
   grid-template-columns: repeat(2, auto);
 
-  @media (min-width:$tablet-width) {
+  @media (min-width: $tablet-width) {
     padding: 25px 37px 28px;
 
     border: 1px solid $special-grey;
@@ -70,7 +70,7 @@
     grid-template-columns: 1fr 150px 70px;
   }
 
-  @media (min-width:$desktop-width) {
+  @media (min-width: $desktop-width) {
     align-items: baseline;
     padding: 14px 0 16px;
 
@@ -97,7 +97,7 @@
 
   grid-column: 1/-1;
 
-  @media (min-width:$tablet-width) {
+  @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 20px;
 
@@ -125,7 +125,7 @@
 .more__button {
   grid-column: 1/-1;
 
-  @media (min-width:$desktop-width) {
+  @media (min-width: $desktop-width) {
     grid-column: auto;
   }
 }
@@ -160,7 +160,7 @@
     background-position: center left 80px, top, center;
   }
 
-  @media (min-width:$desktop-width) {
+  @media (min-width: $desktop-width) {
     width: 245px;
     padding: 172px 20px 26px;
 
