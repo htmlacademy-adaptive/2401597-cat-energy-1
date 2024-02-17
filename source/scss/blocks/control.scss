@@ -54,7 +54,6 @@
 
     font-size: 20px;
     line-height: 30px;
-
   }
 }
 
@@ -82,11 +81,10 @@
 
     pointer-events: none;
 
-    &+.control__label {
+    & + .control__label {
       opacity: 0.3;
 
       pointer-events: none;
-
     }
   }
 

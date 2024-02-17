@@ -1,23 +1,21 @@
-// @include font("Name Fonts", name-file, 700, normal);
 @mixin font($font_name, $file_name, $weight, $style) {
   font-style: #{$style};
   font-weight: #{$weight};
   font-family: $font_name;
-
   font-display: swap;
-  src: url("../../fonts/#{$file_name}.woff2") format("woff2"),
-  url("../../fonts/#{$file_name}.woff") format("woff");
+  src:
+    url ("../../fonts/#{$file_name}.woff2") format("woff2"),
+    url("../../fonts/#{$file_name}.woff") format("woff");
 }
 
-// @include fontFolder("Name Fonts", name-folder, name-file, 700, normal);
 @mixin fontFolder($font_name, $file__direct, $file_name, $weight, $style) {
   font-style: #{$style};
   font-weight: #{$weight};
   font-family: $font_name;
-
   font-display: swap;
-  src: url("../../fonts/#{$file__direct}/#{$file_name}.woff2") format("woff2"),
-  url("../../fonts/#{$file__direct}/#{$file_name}.woff") format("woff");
+  src:
+    url ("../../fonts/#{$file__direct}/#{$file_name}.woff2") format("woff2"),
+    url("../../fonts/#{$file__direct}/#{$file_name}.woff") format("woff");
 }
 
 @mixin media-max($max-media) {
@@ -26,7 +24,6 @@
   }
 }
 
-// Mobile first
 @mixin media-min($min-media) {
   @media (min-width: $min-media) {
     @content;
@@ -50,14 +47,12 @@
 @mixin focus {
   &:focus-visible {
     outline: none;
-
     @content;
   }
 
   @supports not selector(:focus-visible) {
     &:focus {
       outline: none;
-
       @content;
     }
   }
@@ -72,14 +67,12 @@
 
   &:focus-visible {
     outline: none;
-
     @content;
   }
 
   @supports not selector(:focus-visible) {
     &:focus {
       outline: none;
-
       @content;
     }
   }
@@ -100,23 +93,18 @@
 
 @mixin visibility-a11y {
   position: fixed;
-
   transform: scale(0);
 }
 
 @mixin visibility {
   position: absolute;
-
   width: 1px;
   height: 1px;
   margin: -1px;
   padding: 0;
   overflow: hidden;
-
   white-space: nowrap;
-
   border: 0;
-
   clip: rect(0 0 0 0);
   clip-path: inset(100%);
 }

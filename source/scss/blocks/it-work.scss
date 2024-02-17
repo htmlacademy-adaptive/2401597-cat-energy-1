@@ -1,11 +1,11 @@
 .it-work {
   padding: 0 0 49px;
 
-  @media(min-width:$tablet-width) {
+  @media (min-width: $tablet-width) {
     padding: 24px 0 49px;
   }
 
-  @media (min-width:$desktop-width) {
+  @media (min-width: $desktop-width) {
     padding: 71px 0 0;
   }
 }
@@ -13,7 +13,7 @@
 .it-work__title {
   margin-bottom: 39px;
 
-  @media (min-width:$desktop-width) {
+  @media (min-width: $desktop-width) {
     margin-bottom: 41px;
   }
 }
@@ -24,7 +24,7 @@
 
   list-style-type: none;
 
-  @media (min-width:$tablet-width) {
+  @media (min-width: $tablet-width) {
     display: grid;
 
     counter-reset: num;
@@ -33,7 +33,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @media (min-width:$desktop-width) {
+  @media (min-width: $desktop-width) {
     gap: 80px;
     grid-template-columns: repeat(4, 1fr);
   }
@@ -48,7 +48,7 @@
   font-size: 14px;
   line-height: 18px;
 
-  @media (min-width:$tablet-width) {
+  @media (min-width: $tablet-width) {
     padding: 123px 75px 45px 0;
 
     font-size: 16px;

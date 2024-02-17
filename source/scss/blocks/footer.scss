@@ -6,7 +6,7 @@
   padding-top: 40px;
   padding-bottom: 40px;
 
-  @media (min-width:$tablet-width) {
+  @media (min-width: $tablet-width) {
     display: grid;
     align-items: center;
     padding-top: 57px;
@@ -15,7 +15,7 @@
     grid-template-columns: repeat(3, 1fr);
   }
 
-  @media (min-width:$desktop-width) {
+  @media (min-width: $desktop-width) {
     padding-top: 67px;
     padding-bottom: 65px;
   }
@@ -27,7 +27,7 @@
   height: 24px;
   margin: 0 auto 19px;
 
-  @media (min-width:$tablet-width) {
+  @media (min-width: $tablet-width) {
     margin: 0;
   }
 }
